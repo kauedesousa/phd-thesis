@@ -1,0 +1,39 @@
+---
+#title: "Untitled"
+#author: "Kauê de Sousa"
+#date: "3/27/2020"
+output: word_document
+header-includes:
+  - \usepackage{pdfpages}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Abstract
+
+\pagebreak
+
+# Sammendrag
+
+\pagebreak
+
+# Table of contents
+
+\pagebreak
+
+# Paper 1
+
+\includepdf[pages={-}]{article-1/deSousa_etal_2018_rural_studies.pdf}
+
+# Paper 2
+
+\includepdf[pages={-}]{article-2/deSousa_etal_2019_scientific_reports.pdf}
+
+# Paper 3
+\includepdf[pages={-}]{article-3/vanEtten_deSousa_etal_2019_pnas.pdf}
+
+# Paper 4
+
+# Paper 5
