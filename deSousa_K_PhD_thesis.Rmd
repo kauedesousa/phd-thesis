@@ -1,39 +1,128 @@
 ---
-#title: "Untitled"
-#author: "Kauê de Sousa"
-#date: "3/27/2020"
-output: word_document
-header-includes:
-  - \usepackage{pdfpages}
+bibliography: "library/bibliography.bib"
+csl: "library/citation.csl"
+output:
+   word_document:
+     toc: true
+     reference_docx: "library/word-style.docx"
+     fig_width: 5
+     fig_height: 4
+     fig_caption: true
+# output:
+#    pdf_document:
+#       fig_caption: true
+#       number_sections: false
+# header-includes:
+#   - \usepackage{pdfpages}
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+\pagebreak
 
 # Abstract
+
+Agriculture is a dynamic activity that constantly evolve since its origin. It sustains food and other goods that the global population depends on. Aiming to ensure global food security, the sector has evolved dramatically, especially over the last century with the introduction of high-yielding crops, improved technology, and pathogen resistant and nutrition enriched varieties, to name a few. Still, according to the FAO, the food security issue is constantly present. In 2019, around 26% of the world population experienced either a moderate or severe level of food insecurity. Climate change makes the challenge of food security even more accurate. To cope with climate change and global food insecurity, the whole food system needs to be transformed, including at farm level but also on how food is distributed and what we eat. It is argued that increased agrobiodiversity through farm diversification and varietal selection can help farmers to cope up with the negative effects of climate change while ensuring food security. However, such approaches have been difficult to scale up. One could argue that we often lack information to understand the contexts that drives farmers’ adaptation decisions. In this thesis we developed methods and tools to support farmers and stakeholders in adapting to a changing climate. We compiled evidence and insights from three continents to improve the understanding of the food systems at the farm level, and specifically for smallholders.
 
 \pagebreak
 
 # Sammendrag
 
-\pagebreak
-
-# Table of contents
+Landbruk er en dynamisk aktivitet som stadig utvikler seg siden opphavet. Den opprettholder mat og andre varer som verdens befolkning er avhengig av. Sektoren har som mål å sikre global matsikkerhet utviklet seg dramatisk, spesielt i løpet av det siste århundret med introduksjon av høye avlinger, forbedret teknologi og patogene resistente og ernæringsanrikede varianter, for å nevne noen. Fortsatt, ifølge FAO, er matsikkerhetsspørsmålet stadig til stede. I 2019 opplevde rundt 26% av verdensbefolkningen enten et moderat eller alvorlig nivå av matusikkerhet. Klimaendringer gjør utfordringen med matsikkerhet enda mer nøyaktig. For å takle klimaendringer og global matusikkerhet, må hele matsystemet transformeres, inkludert på gårdsnivå, men også på hvordan mat blir distribuert og hva vi spiser. Det argumenteres for at økt agrobiodiversitet gjennom diversifisering av gårdsbruk og sortering av sorter kan hjelpe bønder til å takle de negative effektene av klimaendringer og samtidig sikre matsikkerhet. Slike tilnærminger har imidlertid vært vanskelig å skalere opp. Man kan hevde at vi ofte mangler informasjon for å forstå sammenhenger som driver bøndenes tilpasningsvedtak. I denne oppgaven utviklet vi metoder og verktøy for å støtte bønder og interessenter i å tilpasse seg et klima i endring. Vi samlet bevis og innsikt fra tre kontinenter for å bedre forståelsen av matsystemene på gårdsnivå, og spesielt for småbrukere.
 
 \pagebreak
+\tableofcontents
+\pagebreak
+\listoffigures
+\pagebreak
+\listoftables
 
-# Paper 1
+
+\pagebreak
+
+# Abbreviations
+
+AIC - Akaike information criterion
+
+CATIE - Tropical Agricultural Research and Higher Education Center
+
+CGIAR - Consultative Group on International Agricultural Research
+
+ICRAF - World Agroforestry
+
+MAP - Mesoamerican Agroenvironmental Program
+
+\pagebreak
+
+# List of papers
+
+**Paper I**
+
+**de Sousa, K.**, Casanoves, F., Sellare, J., Ospina, A., Suchini, J. G., Aguilar, A., & Mercado, L. (2018). How climate awareness influences farmers’ adaptation decisions in Central America? Journal of Rural Studies, 64, 11–19. doi: 10.1016/j.jrurstud.2018.09.018
+
+**Paper II**
+
+**de Sousa, K.**, van Zonneveld, M., Holmgren, M., Kindt, R., & Ordoñez, J. C. (2019). The future of coffee and cocoa agroforestry in a warmer Mesoamerica. Scientific Reports, 9(1), 8828. doi: 10.1038/s41598-019-45491-7
+
+**Paper III**
+
+van Etten, J., **de Sousa, K.**, Aguilar, A., Barrios, M., Coto, A., Dell’Acqua, M., Fadda, C., Gebrehawaryat, Y., van de Gevel, J., Gupta, A., Kiros, A. Y., Madriz, B., Mathur, P., Mengistu, D. K., Mercado, L., Nurhisen Mohammed, J., Paliwal, A., Pè, M. E., Quirós, C. F., … Steinke, J. (2019). Crop variety management for climate adaptation supported by citizen science. Proceedings of the National Academy of Sciences, 116(10), 4194–4199. doi: 10.1073/pnas.1813720116
+
+**Paper IV**
+
+**de Sousa, K.**, van Etten, J., Poland, J., Fadda, C., Jannink, J.L., Kidane, Y.G., Lakew, B.F., Mengistu, D.F., Pè, M.E., Solberg, S.Ø., Dell’Acqua, M. (2020) “Data-driven decentralised breeding increases genetic gain in a challenging crop production environment”.
+
+**Paper V**
+
+**de Sousa, K.**, van Etten, J., Solberg, S.Ø. (2020). “Climate variability indices for ecological and crop models in R: the `climatrends` package”. 
+
+\pagebreak
+
+# Introduction
+
+# Methods
+
+## Study sites
+
+```{r fig1, fig.cap="**Fig. 1.** Study sites", echo=FALSE, out.width = '10%'}
+knitr::include_graphics("display-items/Fig1_ResearchSites.png")
+```
+
+## Statistical design
+
+Equation [1]
+
+$$P (i > j) = \frac{p_i}{p_i + p_j} $$
+where $p_i$ is a positive real-valued score assigned to individual $i$. The comparison $i > j$ can be read as "$i$ ranks higher than $j$" 
+
+
+Equation [2]
+
+$$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
+
+
+# Results and discussion
+
+
+
+# Conclusions
+
+# Future research 
+
+# Funding statement
+
+This work has been possible thanks to the financial support of multiple funding agencies. We thank the Royal Embassy of Norway (contract no. CAM-2647-12/0004, MAP Norway Second Phase). The US Agency for International Development, which supported this research via the Cooperative Agreement AID-OAA-F-14-00035, made possible by the generous support of the American people. The McKnight Foundation (grant num. CCRP 16–098). The German Federal Ministry for Economic Cooperation and Development (grant num. 81194988). The Nordic Joint Committee for Agricultural and Food Research (grant num. 202100-2817). Hivos International (grant num. HI-A70D41/A1092). And the Indian Council of Agricultural Research Annual Workplan. This work was implemented as part of the CGIAR Research Program on Forests, Trees and Agroforestry (FTA) and the CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), which are carried out with support from the CGIAR Trust Fund and through bilateral funding agreements. For details, please visit https://www.cgiar.org/funders. 
+
+\pagebreak
+
+# References
+
+<div id="refs"></div>
+
+\pagebreak
+
 
 \includepdf[pages={-}]{article-1/deSousa_etal_2018_rural_studies.pdf}
 
-# Paper 2
-
 \includepdf[pages={-}]{article-2/deSousa_etal_2019_scientific_reports.pdf}
 
-# Paper 3
 \includepdf[pages={-}]{article-3/vanEtten_deSousa_etal_2019_pnas.pdf}
 
-# Paper 4
-
-# Paper 5
