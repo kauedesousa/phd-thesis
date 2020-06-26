@@ -1,19 +1,25 @@
 ---
 bibliography: "library/bibliography.bib"
 csl: "library/citation.csl"
-output:
-   word_document:
-     toc: true
-     reference_docx: "library/word-style.docx"
-     fig_width: 5
-     fig_height: 4
-     fig_caption: true
 # output:
-#    pdf_document:
-#       fig_caption: true
-#       number_sections: false
-# header-includes:
-#   - \usepackage{pdfpages}
+#    word_document:
+#      toc: true
+#      reference_docx: "library/word-style.docx"
+#      fig_width: 5
+#      fig_height: 4
+#      fig_caption: true
+output:
+   pdf_document:
+      #template: "library/template.tex"
+      fig_caption: true
+      number_sections: false
+latex_engine: pdflatex
+geometry: margin=1in
+fontsize: 12pt
+header-includes:
+  - \usepackage{pdfpages}
+  - \usepackage{caption}
+#  - \captionsetup[figure]{labelformat=empty}
 ---
 
 \pagebreak
@@ -56,15 +62,15 @@ MAP - Mesoamerican Agroenvironmental Program
 
 **Paper I**
 
-**de Sousa, K.**, Casanoves, F., Sellare, J., Ospina, A., Suchini, J. G., Aguilar, A., & Mercado, L. (2018). How climate awareness influences farmers’ adaptation decisions in Central America? Journal of Rural Studies, 64, 11–19. doi: 10.1016/j.jrurstud.2018.09.018
+**de Sousa, K.**, Casanoves, F., Sellare, J., Ospina, A., Suchini, J. G., Aguilar, A., & Mercado, L. (2018). How climate awareness influences farmers’ adaptation decisions in Central America? Journal of Rural Studies, 64, 11–19. doi: [10.1016/j.jrurstud.2018.09.018](https://doi.org/10.1016/j.jrurstud.2018.09.018)
 
 **Paper II**
 
-**de Sousa, K.**, van Zonneveld, M., Holmgren, M., Kindt, R., & Ordoñez, J. C. (2019). The future of coffee and cocoa agroforestry in a warmer Mesoamerica. Scientific Reports, 9(1), 8828. doi: 10.1038/s41598-019-45491-7
+**de Sousa, K.**, van Zonneveld, M., Holmgren, M., Kindt, R., & Ordoñez, J. C. (2019). The future of coffee and cocoa agroforestry in a warmer Mesoamerica. Scientific Reports, 9(1), 8828. doi: [10.1038/s41598-019-45491-7](https://doi.org/10.1038/s41598-019-45491-7)
 
 **Paper III**
 
-van Etten, J., **de Sousa, K.**, Aguilar, A., Barrios, M., Coto, A., Dell’Acqua, M., Fadda, C., Gebrehawaryat, Y., van de Gevel, J., Gupta, A., Kiros, A. Y., Madriz, B., Mathur, P., Mengistu, D. K., Mercado, L., Nurhisen Mohammed, J., Paliwal, A., Pè, M. E., Quirós, C. F., … Steinke, J. (2019). Crop variety management for climate adaptation supported by citizen science. Proceedings of the National Academy of Sciences, 116(10), 4194–4199. doi: 10.1073/pnas.1813720116
+van Etten, J., **de Sousa, K.**, Aguilar, A., Barrios, M., Coto, A., Dell’Acqua, M., Fadda, C., Gebrehawaryat, Y., van de Gevel, J., Gupta, A., Kiros, A. Y., Madriz, B., Mathur, P., Mengistu, D. K., Mercado, L., Nurhisen Mohammed, J., Paliwal, A., Pè, M. E., Quirós, C. F., … Steinke, J. (2019). Crop variety management for climate adaptation supported by citizen science. Proceedings of the National Academy of Sciences, 116(10), 4194–4199. doi: [10.1073/pnas.1813720116](https://doi.org/10.1073/pnas.1813720116)
 
 **Paper IV**
 
@@ -78,11 +84,35 @@ van Etten, J., **de Sousa, K.**, Aguilar, A., Barrios, M., Coto, A., Dell’Acqu
 
 # Introduction
 
+# Objectives
+
+In this project I focus in develop methods and provide insights to support farmers and stakeholders in adapting agricultural systems to a changing climate, specifically for smallholders, by answering the following questions:
+
+
+**What are the farmers’ attitudes to cope with climate change?**
+
+
+
+**Is agroforestry with the current tree combinations a suitable approach under climate change?**
+
+
+**In what extent cocoa is a suitable alternative to coffee?**
+
+
+
+**Can on-farm participatory crop trials generate insights into climate adaptation of varieties?**
+
+
+
+**Can a data-driven decentralised approach improve the selection of genotypes in challenging crop production environments?**
+
+
+
 # Methods
 
-## Study sites
+## Research sites
 
-```{r fig1, fig.cap="**Fig. 1.** Study sites", echo=FALSE, out.width = '10%'}
+```{r fig1, fig.cap="Research sites. (A) Overview. (B) India. (C) Mesoamerica. (D) Ethiopia. Farms included in the trials or interviews are indicated as dots.", echo=FALSE, out.width = '60%', fig.align="center"}
 knitr::include_graphics("display-items/Fig1_ResearchSites.png")
 ```
 
@@ -90,8 +120,10 @@ knitr::include_graphics("display-items/Fig1_ResearchSites.png")
 
 Equation [1]
 
-$$P (i > j) = \frac{p_i}{p_i + p_j} $$
-where $p_i$ is a positive real-valued score assigned to individual $i$. The comparison $i > j$ can be read as "$i$ ranks higher than $j$" 
+$$
+P (i \succ j) = \frac{p_i}{p_i + p_j}
+$$
+where $p_i$ is a positive real-valued score assigned to individual $i$. The comparison $i \succ j$ can be read as "$i$ ranks higher than $j$" 
 
 
 Equation [2]
@@ -102,14 +134,41 @@ $$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
 # Results and discussion
 
 
+## Farmers' adaptation decisions
+
+## Diversifying with trees 
+
+## Changing crop varieties
+
+**Table 1.** Performance of the 3D-breeding compared with the benchmark of a centralised genomic selection. 3D-breeding provides higher across-season goodness-of-fit (Kendall $\tau$) than centralised genomic selection on farmers’ overall appreciation (*OA*) and grain yield (*GY*). 
+
+| **Approach**	     | **OA**          |**GY**            | 
+| ------------------ |:---------------:|:----------------:|
+| **Centralised GS** |                 |                  |
+| Season 1 (n=179)   | 0.134           | -0.012           |
+| Season 2 (n=651)   | 0.105           | 0.076            |
+| Season 3 (n=335)   | 0.183           | 0.073            |
+|                    | **0.141 (± 0.039)** | **0.046 (± 0.049)**|
+| **3D-breeding **   |                 |                  |
+| Season 1 (n=179)   | 0.270           | 0.160            |
+| Season 2 (n=651)   | 0.276           | 0.078            |
+| Season 3 (n=335)   | 0.203           | 0.119            |
+|                    | **0.251 (± 0.040)** | **0.109 (± 0.041)**|
+
 
 # Conclusions
 
-# Future research 
+# Future research and perspective
+
+\pagebreak
 
 # Funding statement
 
 This work has been possible thanks to the financial support of multiple funding agencies. We thank the Royal Embassy of Norway (contract no. CAM-2647-12/0004, MAP Norway Second Phase). The US Agency for International Development, which supported this research via the Cooperative Agreement AID-OAA-F-14-00035, made possible by the generous support of the American people. The McKnight Foundation (grant num. CCRP 16–098). The German Federal Ministry for Economic Cooperation and Development (grant num. 81194988). The Nordic Joint Committee for Agricultural and Food Research (grant num. 202100-2817). Hivos International (grant num. HI-A70D41/A1092). And the Indian Council of Agricultural Research Annual Workplan. This work was implemented as part of the CGIAR Research Program on Forests, Trees and Agroforestry (FTA) and the CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), which are carried out with support from the CGIAR Trust Fund and through bilateral funding agreements. For details, please visit https://www.cgiar.org/funders. 
+
+\pagebreak
+
+# Acknowledgements
 
 \pagebreak
 
@@ -119,10 +178,22 @@ This work has been possible thanks to the financial support of multiple funding 
 
 \pagebreak
 
+# Appendices
+
+\pagebreak
+
+\Huge Paper I
 
 \includepdf[pages={-}]{article-1/deSousa_etal_2018_rural_studies.pdf}
 
+\Huge Paper II
+
 \includepdf[pages={-}]{article-2/deSousa_etal_2019_scientific_reports.pdf}
 
+\Huge Paper III
+
+
 \includepdf[pages={-}]{article-3/vanEtten_deSousa_etal_2019_pnas.pdf}
+
+\Huge Paper IV
 
