@@ -43,6 +43,9 @@ vignettes/*.pdf
 deSousa_K_PhD_thesis.pdf
 deSousa_K_PhD_thesis.docx
 
+library/agroforestry-options.bib
+library/gosset.bib
+
 # large files
 data/research_sites/
 data/examples/

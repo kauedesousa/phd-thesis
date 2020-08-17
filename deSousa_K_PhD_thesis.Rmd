@@ -1,5 +1,5 @@
 ---
-bibliography: "library/bibliography.bib"
+bibliography: "library/phd-thesis.bib"
 csl: "library/citation.csl"
 # output:
 #    word_document:
@@ -10,7 +10,6 @@ csl: "library/citation.csl"
 #      fig_caption: true
 output:
    pdf_document:
-      #template: "library/template.tex"
       fig_caption: true
       number_sections: false
 latex_engine: pdflatex
@@ -98,13 +97,14 @@ In this project I focus in develop methods and provide insights to support farme
 
 **What are the farmers’ adaptation strategies to cope with climate change? (Paper I)**
 
-Climate change has increased the risks and uncertainties associated with agriculture, particularly for smallholders []. 
+Climate change increases the risks and uncertainties associated with agriculture, particularly for smallholders [@Altieri2017; @Campbell2016]. The evidence has shown that the adoption of agricultural innovations and climate-adapted practices can help vulnerable farmers to cope with the effects of climate variability and change [@Lipper2014; @Vermeulen2013; @Vermeulen2012]. These practices include farm sustainable intensification, diversification of production, agroforestry, crop variety management and plant breeding. The farmers' awareness and perceptions of climate change are correlated with the adoption of such innovations [@Elum2017; @Niles2016; @Schattman2016; @Singh2017], but no evidence is provided for smallholders in Central America. Paper I [@deSousa2018] targets this knowledge gap. 
 
 **Is agroforestry with the current tree combinations a suitable approach under climate change? (Paper II)**
 
 
 **In what extent cocoa is a suitable alternative to coffee? (Paper III)**
 
+[@deSousa2019]
 
 **Can on-farm participatory crop trials generate insights into climate adaptation of varieties? (Paper IV)**
 
@@ -122,6 +122,8 @@ knitr::include_graphics("display-items/Fig1_ResearchSites.png")
 
 ## Statistical design
 
+[@vanEtten2019tricot]
+
 Equation [1]
 
 $$
@@ -136,32 +138,31 @@ $$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
   
   
 # Results and discussion
-  
-  
+
 ## Farmers' adaptation decisions
-  
+
 ## Diversifying with trees 
-  
+
 ## Changing crop varieties
-  
+
 **Table 1.** Performance of the 3D-breeding compared with the benchmark of a centralised genomic selection. 3D-breeding provides higher across-season goodness-of-fit (Kendall $\tau$) than centralised genomic selection on farmers’ overall appreciation (*OA*) and grain yield (*GY*). 
 
 | **Approach**	     | **OA**          |**GY**            | 
-  | ------------------ |:---------------:|:----------------:|
-  | **Centralised GS** |                 |                  |
-  | Season 1 (n=179)   | 0.134           | -0.012           |
-  | Season 2 (n=651)   | 0.105           | 0.076            |
-  | Season 3 (n=335)   | 0.183           | 0.073            |
-  |                    | **0.141 (± 0.039)** | **0.046 (± 0.049)**|
-  | **3D-breeding **   |                 |                  |
-  | Season 1 (n=179)   | 0.270           | 0.160            |
-  | Season 2 (n=651)   | 0.276           | 0.078            |
-  | Season 3 (n=335)   | 0.203           | 0.119            |
-  |                    | **0.251 (± 0.040)** | **0.109 (± 0.041)**|
+| ------------------ |:---------------:|:----------------:|
+| **Centralised GS** |                 |                  |
+| Season 1 (n=179)   | 0.134           | -0.012           |
+| Season 2 (n=651)   | 0.105           | 0.076            |
+| Season 3 (n=335)   | 0.183           | 0.073            |
+|                    | **0.141 (± 0.039)** | **0.046 (± 0.049)**|
+| **3D-breeding **   |                 |                  |
+| Season 1 (n=179)   | 0.270           | 0.160            |
+| Season 2 (n=651)   | 0.276           | 0.078            |
+| Season 3 (n=335)   | 0.203           | 0.119            |
+|                    | **0.251 (± 0.040)** | **0.109 (± 0.041)**|
   
   
 # Conclusions
-  
+
 # Future research and perspective
   
 \pagebreak
