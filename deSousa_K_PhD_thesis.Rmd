@@ -93,7 +93,7 @@ J van Etten, **K de Sousa**, A Aguilar, M Barrios, A Coto, M Dell’Acqua, C Fad
 
 # Objectives
 
-In this project I focus in develop methods and provide insights to support farmers and stakeholders in adapting agricultural systems to a changing climate, specifically for smallholders, by answering the following questions:
+In this project I focussed in provide insights and develop methods to support farmers and stakeholders in adapting agricultural systems to a changing climate, specifically for smallholders, by answering the following questions:
 
 **What are the farmers’ adaptation strategies to cope with climate change? (Paper I)**
 
@@ -101,15 +101,18 @@ Climate change increases the risks and uncertainties associated with agriculture
 
 **Is agroforestry with the current tree combinations a suitable approach under climate change? (Paper II)**
 
+Agroforestry, the deliberate and simultaneous management of trees within crop or livestock systems, is considered an important climate-adapted innovation to increase the resilience of agricultural systems [@Nair1993; @Spurgeon1979]. Trees can ameliorate the micro-climate and facilitate the performance of understory crops [@Holmgren2010]. Most perennial crop systems in Central America (e.g. coffee and cocoa) are managed following agroforestry practices [@Beer1998; @Somarriba2013], and have been increasingly encouraged as climate change is projected to affect future crop production [@OvalleRivera2015]. Nevertheless, climate change can also affect the future ecological niches of several tree species [@Holmgren2013; @Lyra2017] and may restrain the prospects of agroforestry as a viable approach for climate adaptation. Paper II [@deSousa2019] assesses the future of the 100 most common tree species found in coffee and cocoa production systems in Central America.
 
 **In what extent cocoa is a suitable alternative to coffee? (Paper III)**
 
-[@deSousa2019]
-
-**Can on-farm participatory crop trials generate insights into climate adaptation of varieties? (Paper IV)**
+As climate change projections points to a decline in coffee production due to the increasingly climate variability [@OvalleRivera2015; @Bunn2015; @Laderach2017], farmers has developed a taste for cocoa. The drivers of this shift are trends in recent years of increasing coffee production costs and large loses due to pests and diseases (e.g. leaf rust crisis) [@Avelino2015]. Replacing coffee by cocoa has become one of the main strategies for climate change adaptation for producers in low elevation areas [@Laderach2017]. Nevertheless, there is no quantitative assessment of the feasibility of such strategy, starting from considering that cocoa is vulnerable to climate change itself [@Schroth2016]. Paper II [@deSousa2019] also explore this strategy assessing the potential areas where cocoa is a suitable alternative to coffee.
 
 
-**Can a data-driven decentralised approach improve the selection of genotypes in challenging crop production environments? (Paper V)**
+**Can on-farm participatory crop trials generate insights into variety management for climate adaptation? (Paper III)**
+
+Crop improvement increases production and contribute the food and nutrition security [@Hickey2019; @Godfray2010]. Previous studies has shown that is critical that farmers keep a continuous turnover of improved and local-adapted varieties for climate adaptation [@Challinor2016; @Atlin2017]. One constrain, however, in adopting this practice is the costs in investing in seasonal management. Farmers often rely on their local varieties and changing to new ones can increase the risks when the performance of these varieties under local conditions is unknown [@Dawson2008]. Existing approaches to generate these recommendations lack the ability to provide such recommendations across space and time in marginal production environments. Paper III [@vanEtten2019] address this issue by exploring a novel participatory approach to characterise varietal climatic responses allowing for seasonal and geographical extrapolation. 
+
+**Can a data-driven decentralised approach improve the selection of genotypes in challenging crop production environments? (Paper IV)**
   
 
 # Methods
