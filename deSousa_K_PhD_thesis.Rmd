@@ -12,16 +12,15 @@ output:
    pdf_document:
       fig_caption: true
       number_sections: false
+      keep_tex: false
 latex_engine: pdflatex
 geometry: margin=1in
-fontsize: 12pt
+fontsize: 11pt
 header-includes:
   - \usepackage{pdfpages}
   - \usepackage{caption}
 #  - \captionsetup[figure]{labelformat=empty}
 ---
-
-
 
 \pagebreak
 
@@ -95,51 +94,74 @@ J van Etten, **K de Sousa**, A Aguilar, M Barrios, A Coto, M Dell’Acqua, C Fad
 
 In this project I focussed in provide insights and develop methods to support farmers and stakeholders in adapting agricultural systems to a changing climate, specifically for smallholders, by answering the following questions:
 
-**What are the farmers’ adaptation strategies to cope with climate change? (Paper I)**
+**How does climate awareness influences farmers’ adaptation decisions? (Paper I)**
 
-Climate change increases the risks and uncertainties associated with agriculture, particularly for smallholders [@Altieri2017; @Campbell2016]. The evidence has shown that the adoption of agricultural innovations and climate-adapted practices can help vulnerable farmers to cope with the effects of climate variability and change [@Lipper2014; @Vermeulen2013; @Vermeulen2012]. These practices include farm sustainable intensification, diversification of production, agroforestry, crop variety management and plant breeding. The farmers' awareness and perceptions of climate change are correlated with the adoption of such innovations [@Elum2017; @Niles2016; @Schattman2016; @Singh2017], but no evidence is provided for smallholders in Central America. Paper I [@deSousa2018] targets this knowledge gap. 
+Climate change increases the risks and uncertainties associated with agriculture, particularly for smallholders [@Altieri2017; @Campbell2016]. The evidence has shown that the adoption of agricultural innovations and climate-adapted practices can help vulnerable farmers to cope with the effects of climate variability and change [@Lipper2014; @Vermeulen2013; @Vermeulen2012]. These practices include farm sustainable intensification, diversification of production, agroforestry, crop variety management and plant breeding. Farmers' awareness and perceptions of climate change are correlated with the adoption of such innovations [@Elum2017; @Niles2016; @Schattman2016; @Singh2017], but no evidence is provided for smallholders in Central America. Paper I [@deSousa2018] targets this knowledge gap. 
 
-**Is agroforestry with the current tree combinations a suitable approach under climate change? (Paper II)**
+**What is the future of current agroforestry combinations in coffee and cocoa production systems? (Paper II)**
 
 Agroforestry, the deliberate and simultaneous management of trees within crop or livestock systems, is considered an important climate-adapted innovation to increase the resilience of agricultural systems [@Nair1993; @Spurgeon1979]. Trees can ameliorate the micro-climate and facilitate the performance of understory crops [@Holmgren2010]. Most perennial crop systems in Central America (e.g. coffee and cocoa) are managed following agroforestry practices [@Beer1998; @Somarriba2013], and have been increasingly encouraged as climate change is projected to affect future crop production [@OvalleRivera2015]. Nevertheless, climate change can also affect the future ecological niches of several tree species [@Holmgren2013; @Lyra2017] and may restrain the prospects of agroforestry as a viable approach for climate adaptation. Paper II [@deSousa2019] assesses the future of the 100 most common tree species found in coffee and cocoa production systems in Central America.
 
-**In what extent cocoa is a suitable alternative to coffee? (Paper III)**
+**Can cocoa became a suitable alternative in vulnerable coffee production areas? (Paper III)**
 
 As climate change projections points to a decline in coffee production due to the increasingly climate variability [@OvalleRivera2015; @Bunn2015; @Laderach2017], farmers has developed a taste for cocoa. The drivers of this shift are trends in recent years of increasing coffee production costs and large loses due to pests and diseases (e.g. leaf rust crisis) [@Avelino2015]. Replacing coffee by cocoa has become one of the main strategies for climate change adaptation for producers in low elevation areas [@Laderach2017]. Nevertheless, there is no quantitative assessment of the feasibility of such strategy, starting from considering that cocoa is vulnerable to climate change itself [@Schroth2016]. Paper II [@deSousa2019] also explore this strategy assessing the potential areas where cocoa is a suitable alternative to coffee.
 
 
 **Can on-farm participatory crop trials generate insights into variety management for climate adaptation? (Paper III)**
 
-Crop improvement increases production and contribute the food and nutrition security [@Hickey2019; @Godfray2010]. Previous studies has shown that is critical that farmers keep a continuous turnover of improved and local-adapted varieties for climate adaptation [@Challinor2016; @Atlin2017]. One constrain, however, in adopting this practice is the costs in investing in seasonal management. Farmers often rely on their local varieties and changing to new ones can increase the risks when the performance of these varieties under local conditions is unknown [@Dawson2008]. Existing approaches to generate these recommendations lack the ability to provide such recommendations across space and time in marginal production environments. Paper III [@vanEtten2019] address this issue by exploring a novel participatory approach to characterise varietal climatic responses allowing for seasonal and geographical extrapolation. 
+Crop improvement increases production and contribute the food and nutrition security [@Hickey2019; @Godfray2010]. Previous studies has shown that is critical that farmers keep a continuous turnover of improved and local-adapted varieties for climate adaptation [@Challinor2016; @Atlin2017]. One constrain, however, in adopting this practice is the cost in investing in seasonal management. Farmers often rely on their local varieties and changing to new ones can increase the risks when the performance of these varieties under local conditions is unknown [@Dawson2008]. Existing approaches to generate these recommendations lack the ability to provide such recommendations in marginal production environments across space and time. Paper III [@vanEtten2019] address this issue by exploring a participatory approach to characterise varietal climatic responses allowing for seasonal and geographical extrapolation. 
 
 **Can a data-driven decentralised approach improve the selection of genotypes in challenging crop production environments? (Paper IV)**
-  
+
+To adapt to climate change farmers require accelerated selection of genotypes and production of local-adapted varieties [@Godfray2010; @Eshed2019]. At present, plant breeders use genomic selection to increase selection intensity while reducing the time of the breeding cycle and deriving greater genetic gain [@Hickey2019]. Conventional breeding programs often rely on a centralised scheme aimed at maximizing genetic diversity in the early stages of selection and then identifying superior germplasm on the basis of phenotypic observations made in a limited number of environments [@Heffner2009]. This may result in sub-optimal selection of genotypes targeted to marginal production environments [@Ceccarelli2007]. Decentralised participatory approaches could help breeders in accelerate the selection of genotypes while addressing the $G \times E \times M$ interactions required for climate change adaptation [@Ceccarelli2019; @vanEeuwijk2001; @Tester2010; @vanEtten2019tricot]. Paper IV (de Sousa et al 2020) addresses this issue by comparing a decentralised data-driven approach with a benchmark representing conventional.
 
 # Methods
 
 ## Research sites
-  
-```{r fig1, fig.cap="Research sites. (A) Overview. (B) India. (C) Mesoamerica. (D) Ethiopia. Farms included in the trials or interviews are indicated as dots.", echo=FALSE, out.width = '60%', fig.align="center"}
+
+The studies took place in three different regions, Central America, East Africa and South Asia (Fig. 1). The regions are characterised by its rich plant diversity being *Centre of Origin* and domestication [@Vavilov] of important staples and crops such as wheat, durum wheat, rice, common beans, maize, coffee and cocoa. Smallholder agriculture and livestock production are the main livelihood for the majority of the population living in these regions. Poverty and food insecurity levels in the regions are still among the higher in the world. According to the 2019's report on the State of Food Security and Nutrition [@SOFI2019], in 2018 Central America, East Africa and South Asia had, respectively, a prevalence of severe or moderate food insecurity for 31.5%, 62.7% and 34.3% of their total population. 
+
+```{r fig1, fig.cap="Research sites. (A) Overview. (B) India. (C) Central America. (D) Ethiopia. Farms included in the trials or interviews are indicated as dots.", echo=FALSE, out.width = '60%', fig.align="center"}
 knitr::include_graphics("display-items/Fig1_ResearchSites.png")
 ```
 
-## Statistical design
 
-[@vanEtten2019tricot]
+**Table 1.** Environmental characteristics of sampled locations across the research sites. 
+
+| **Research site**   | **Elevation (m)**  |**Temperature (°C)**  | **Precipitation (mm)** | **Ecoregions** |
+| ------------------- |:------------------:|:--------------------:|:----------------------:|:--------------:|
+| Central America     | 597 (190–1900)     | 23 (17–29)         | 1717 (905–2122)          | 4|
+| East Africa         | 2598 (1960-3200)   | 15 (6-25)          | 976 (671–1078)           | 1|
+| South Asia          | 85 (42-571)        | 25 (9-39)          | 1024 (808-1280)          | 3|
+
+Field data was collected between 2010 and 2016 as part of a series of Research for Development programs performed across the regions. In Central America, farmer's surveys were conducted in El Salvador, Guatemala, Honduras and Nicaragua. A subset of participatory crop trials were conducted in Nicaragua. 
+
+## Farmers' climate awareness and adaptation strategies
+
+## Mapping future suitability of coffee and cocoa agroforestry
+
+## Evaluation of crop varieties
+
+## Data analysis
 
 Equation [1]
 
 $$
-  P (i \succ j) = \frac{p_i}{p_i + p_j}
+P (i \succ j) = \frac{p_i}{p_i + p_j}
 $$
 where $p_i$ is a positive real-valued score assigned to individual $i$. The comparison $i \succ j$ can be read as "$i$ ranks higher than $j$" 
 
 
 Equation [2]
 
-$$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
+$$
+P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}
+$$
   
   
+
+## Supporting software
+
 # Results and discussion
 
 ## Farmers' adaptation decisions
@@ -172,7 +194,7 @@ $$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
 
 # Funding statement
 
-This work has been possible thanks to the financial support of multiple funding agencies. We thank the Royal Embassy of Norway (contract no. CAM-2647-12/0004, MAP Norway Second Phase). The US Agency for International Development, which supported this research via the Cooperative Agreement AID-OAA-F-14-00035, made possible by the generous support of the American people. The McKnight Foundation (grant num. CCRP 16–098). The German Federal Ministry for Economic Cooperation and Development (grant num. 81194988). The Nordic Joint Committee for Agricultural and Food Research (grant num. 202100-2817). Hivos International (grant num. HI-A70D41/A1092). And the Indian Council of Agricultural Research Annual Workplan. This work was implemented as part of the CGIAR Research Program on Forests, Trees and Agroforestry (FTA) and the CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), which are carried out with support from the CGIAR Trust Fund and through bilateral funding agreements. For details, please visit https://www.cgiar.org/funders. 
+The research in the papers published alongside this work has been possible thanks to the financial support of multiple funding agencies. We thank the Royal Embassy of Norway (contract no. CAM-2647-12/0004, MAP Norway Second Phase). The US Agency for International Development, which supported this research via the Cooperative Agreement AID-OAA-F-14-00035, made possible by the generous support of the American people. The McKnight Foundation (grant num. CCRP 16–098). The German Federal Ministry for Economic Cooperation and Development (grant num. 81194988). The Nordic Joint Committee for Agricultural and Food Research (grant num. 202100-2817). Hivos International (grant num. HI-A70D41/A1092). This work was implemented as part of the CGIAR Research Program on Forests, Trees and Agroforestry (FTA) and the CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS), which are carried out with support from the CGIAR Trust Fund and through bilateral funding agreements. For details, please visit https://www.cgiar.org/funders. 
 
 \pagebreak
 
