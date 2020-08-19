@@ -57,6 +57,9 @@ dt <- as_tibble(dt)
 
 dt
 
+ind <- getData('GADM', country=c('IND'), level=1)
+
+table(over(coord, ind)$NAME_1)
 
 
 dt %>% 
