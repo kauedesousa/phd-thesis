@@ -1,0 +1,29 @@
+<!-- **Table 1.** Environmental characteristics of sampled locations across the research sites.  -->
+  
+<!-- | **Research site**   | **Elevation (m)**  |**Temperature (°C)**  | **Precipitation (mm)** | **Ecoregions** | -->
+<!-- | ------------------- |:------------------:|:--------------------:|:----------------------:|:--------------:| -->
+<!-- | Central America     | 597 (190–1900)     | 23 (17–29)           | 1717 (905–2122)        | 3              | -->
+<!-- | East Africa         | 2598 (1960-3200)   | 15 (6-25)            | 976 (671–1078)         | 1              | -->
+<!-- | South Asia          | 85 (42-571)        | 25 (9-39)            | 1024 (808-1280)        | 3              | -->
+
+<!-- **Table 1.** Performance of the 3D-breeding compared with the benchmark of a centralised genomic selection. 3D-breeding provides higher across-season goodness-of-fit (Kendall $\tau$) than centralised genomic selection on farmers’ overall appreciation (*OA*) and grain yield (*GY*).  -->
+
+<!-- | **Approach**	     | **OA**          |**GY**            |  -->
+<!-- | ------------------ |:---------------:|:----------------:| -->
+<!-- | **Centralised GS** |                 |                  | -->
+<!-- | Season 1 (n=179)   | 0.134           | -0.012           | -->
+<!-- | Season 2 (n=651)   | 0.105           | 0.076            | -->
+<!-- | Season 3 (n=335)   | 0.183           | 0.073            | -->
+<!-- |                    | **0.141 (± 0.039)** | **0.046 (± 0.049)**| -->
+<!-- | **3D-breeding **   |                 |                  | -->
+<!-- | Season 1 (n=179)   | 0.270           | 0.160            | -->
+<!-- | Season 2 (n=651)   | 0.276           | 0.078            | -->
+<!-- | Season 3 (n=335)   | 0.203           | 0.119            | -->
+<!-- |                    | **0.251 (± 0.040)** | **0.109 (± 0.041)**| -->
+
+This thesis would hardly be possible without the contribution of a number of people, to be exact, 34 co-authors who contributed in some extent to the construction of this work. I really appreciate that help. One special thanks to Jenny Ordoñez, Maarten van Zonneveld, Milena Holmgren and Leida Mercado who guided me in the first steps that I took towards this project. Your support, advice, encouragement, and brilliant insights are something that I will keep with me for the rest of my life. Thank you! 
+
+Jacob van Etten
+Svein Solberg
+adm office at HINN Elisabeth Røe, Ragnhild Østerhagen, Henriette Wathne Gelink and Kaja Johnsen, and Bioversity International Karol Araya and Luis Allen
+

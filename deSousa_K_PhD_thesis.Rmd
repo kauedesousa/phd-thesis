@@ -22,17 +22,22 @@ header-includes:
 #  - \captionsetup[figure]{labelformat=empty}
 ---
 
-\pagebreak
+```{r setup, include=FALSE}
+library("knitr")
+library("kableExtra")
+library("tidyverse")
+```
 
 # Abstract
 
-Agriculture is a dynamic activity that constantly evolve since its origin. It sustains food and other goods that the global population depends on. Aiming to ensure global food security, the sector has evolved dramatically, especially over the last century with the introduction of high-yielding crops, improved technology, and pathogen resistant and nutrition enriched varieties, to name a few. Still, according to the FAO, the food security issue is constantly present. In 2019, around 26% of the world population experienced either a moderate or severe level of food insecurity. Climate change makes the challenge of food security even more accurate. To cope with climate change and global food insecurity, the whole food system needs to be transformed, including at farm level but also on how food is distributed and what we eat. It is argued that increased agrobiodiversity through farm diversification and varietal selection can help farmers to cope up with the negative effects of climate change while ensuring food security. However, such approaches have been difficult to scale up. One could argue that we often lack information to understand the contexts that drives farmers’ adaptation decisions. In this thesis we developed methods and tools to support farmers and stakeholders in adapting to a changing climate. We compiled evidence and insights from three continents to improve the understanding of the food systems at the farm level, and specifically for smallholders.
+
+Agriculture is a dynamic activity that constantly evolve since its origin. It sustains food and other goods that the global population depends on. Aiming to ensure global food security, the sector has evolved dramatically, especially over the last century with the introduction of high-yielding crops, improved technology, and pathogen resistant and nutrition enriched varieties, to name a few. Still, according to the FAO, the food security issue is constantly present. In 2018, around 26% of the world population experienced either a moderate or severe level of food insecurity. Climate change makes the challenge of food security even more accurate. To cope with climate change and global food insecurity, the whole food system needs to be transformed, including at farm level but also on how food is distributed and what we eat. It is argued that increased agrobiodiversity through farm diversification and varietal selection can help farmers to cope up with the negative effects of climate change while ensuring food security. However, such approaches have been difficult to scale up. One could argue that we often lack information to understand the contexts that drives farmers’ adaptation decisions. In this thesis we developed methods and tools to support farmers and stakeholders in adapting to a changing climate. We compiled evidence and insights from three continents to improve the understanding of the food systems at the farm level, and specifically for smallholders.
 
 \pagebreak
 
 # Sammendrag
 
-Landbruk er en dynamisk aktivitet som stadig utvikler seg siden opphavet. Den opprettholder mat og andre varer som verdens befolkning er avhengig av. Sektoren har som mål å sikre global matsikkerhet utviklet seg dramatisk, spesielt i løpet av det siste århundret med introduksjon av høye avlinger, forbedret teknologi og patogene resistente og ernæringsanrikede varianter, for å nevne noen. Fortsatt, ifølge FAO, er matsikkerhetsspørsmålet stadig til stede. I 2019 opplevde rundt 26% av verdensbefolkningen enten et moderat eller alvorlig nivå av matusikkerhet. Klimaendringer gjør utfordringen med matsikkerhet enda mer nøyaktig. For å takle klimaendringer og global matusikkerhet, må hele matsystemet transformeres, inkludert på gårdsnivå, men også på hvordan mat blir distribuert og hva vi spiser. Det argumenteres for at økt agrobiodiversitet gjennom diversifisering av gårdsbruk og sortering av sorter kan hjelpe bønder til å takle de negative effektene av klimaendringer og samtidig sikre matsikkerhet. Slike tilnærminger har imidlertid vært vanskelig å skalere opp. Man kan hevde at vi ofte mangler informasjon for å forstå sammenhenger som driver bøndenes tilpasningsvedtak. I denne oppgaven utviklet vi metoder og verktøy for å støtte bønder og interessenter i å tilpasse seg et klima i endring. Vi samlet bevis og innsikt fra tre kontinenter for å bedre forståelsen av matsystemene på gårdsnivå, og spesielt for småbrukere.
+Landbruk er en dynamisk aktivitet som stadig utvikler seg siden opphavet. Den opprettholder mat og andre varer som verdens befolkning er avhengig av. Sektoren har som mål å sikre global matsikkerhet utviklet seg dramatisk, spesielt i løpet av det siste århundret med introduksjon av høye avlinger, forbedret teknologi og patogene resistente og ernæringsanrikede varianter, for å nevne noen. Fortsatt, ifølge FAO, er matsikkerhetsspørsmålet stadig til stede. I 2018 opplevde rundt 26% av verdensbefolkningen enten et moderat eller alvorlig nivå av matusikkerhet. Klimaendringer gjør utfordringen med matsikkerhet enda mer nøyaktig. For å takle klimaendringer og global matusikkerhet, må hele matsystemet transformeres, inkludert på gårdsnivå, men også på hvordan mat blir distribuert og hva vi spiser. Det argumenteres for at økt agrobiodiversitet gjennom diversifisering av gårdsbruk og sortering av sorter kan hjelpe bønder til å takle de negative effektene av klimaendringer og samtidig sikre matsikkerhet. Slike tilnærminger har imidlertid vært vanskelig å skalere opp. Man kan hevde at vi ofte mangler informasjon for å forstå sammenhenger som driver bøndenes tilpasningsvedtak. I denne oppgaven utviklet vi metoder og verktøy for å støtte bønder og interessenter i å tilpasse seg et klima i endring. Vi samlet bevis og innsikt fra tre kontinenter for å bedre forståelsen av matsystemene på gårdsnivå, og spesielt for småbrukere.
 
 \pagebreak
 \tableofcontents
@@ -40,7 +45,6 @@ Landbruk er en dynamisk aktivitet som stadig utvikler seg siden opphavet. Den op
 \listoffigures
 \pagebreak
 \listoftables
-
 
 \pagebreak
 
@@ -57,6 +61,10 @@ CHIRPS - Climate Hazards Group InfraRed Precipitation with Station
 ICRAF - World Agroforestry
 
 MAP - Mesoamerican Agroenvironmental Program
+
+RCP - Representative Concentration Pathways
+
+SDM - Species Distribution Model 
 
 \pagebreak
 
@@ -82,9 +90,6 @@ J van Etten, **K de Sousa**, A Aguilar, M Barrios, A Coto, M Dell’Acqua, C Fad
 
 **K de Sousa**, J van Etten, SØ Solberg (2020). “Climate variability indices for ecological and crop models in R: the `climatrends` package”. 
 
-**Paper VI**
-
-**K de Sousa**, AH Sparks, W Ashmall, J van Etten, SØ Solberg (2020). “chirps: API Client for the CHIRPS Precipitation Data in R”. *Journal of Open Source Software*, 5(51), 2419. https://doi.org/10.21105/joss.02419
 
 \pagebreak
 
@@ -121,7 +126,7 @@ To adapt to climate change farmers require accelerated selection of genotypes an
 
 The studies took place in three different regions, Central America, East Africa and South Asia (Fig. 1). The regions are characterised by its rich plant diversity being *Centre of Origin* and domestication [@Vavilov] of important staples and crops such as wheat, durum wheat, rice, common beans, maize, coffee and cocoa. Smallholder agriculture and livestock production are the main livelihood for the majority of the population. Poverty and food insecurity levels are still among the higher in the world. According to the 2019's report on the State of Food Security and Nutrition [@SOFI2019], in 2018 Central America, East Africa and South Asia, respectively, had a prevalence of severe or moderate food insecurity for 31.5%, 62.7% and 34.3% of their total population. 
 
-```{r fig1, fig.cap="Research sites. (A) Overview. (B) India. (C) Central America. (D) Ethiopia. Farms included in the trials or interviews are indicated as dots.", echo=FALSE, out.width = '60%', fig.align="center"}
+```{r fig1, fig.cap="Research sites. (A) Overview. (B) India. (C) Central America. (D) Ethiopia. Farms included in the trials or interviews are indicated as dots.", echo=FALSE, out.width = '90%', fig.align="center"}
 knitr::include_graphics("display-items/Fig1_ResearchSites.png")
 ```
 
@@ -129,17 +134,30 @@ Field data was collected between 2010 and 2016 as part of several Research for D
 
 In East Africa, the research was conducted in the regions of Amhara, Oromia and Tigray in Ethiopia, which encompasses one main ecological region, the Ethiopian Montane Grasslands and Woodlands. The main crop grown by smallholder farmers in this region are durum wheat, teff, barley and sorghum, mostly for household consumption and local markets. In South Asia, the research was conducted across the States of Bihar, Madhya Pradesh and Uttar Pradesh encompassing three ecological regions, the Upper Gangetic Plains Moist Deciduous Forests, the Lower Gangetic Plains Moist Deciduous Forests, and the Narmada Valley Dry Deciduous Forests. The main crop grown by smallholders are rice, wheat, maize, and several pulses and vegetables. Table 1 presents a description on the environmental characteristics of each region extracted from the sampled locations used in this research. 
 
-<!-- **Table 1.** Environmental characteristics of sampled locations across the research sites.  -->
 
-<!-- | **Research site**   | **Elevation (m)**  |**Temperature (°C)**  | **Precipitation (mm)** | **Ecoregions** | -->
-<!-- | ------------------- |:------------------:|:--------------------:|:----------------------:|:--------------:| -->
-<!-- | Central America     | 597 (190–1900)     | 23 (17–29)           | 1717 (905–2122)        | 3              | -->
-<!-- | East Africa         | 2598 (1960-3200)   | 15 (6-25)            | 976 (671–1078)         | 1              | -->
-<!-- | South Asia          | 85 (42-571)        | 25 (9-39)            | 1024 (808-1280)        | 3              | -->
+```{r site_chars, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
+tb <- as.data.frame(matrix(
+  c("Central America", "597 (190–1900)", "23 (17–29)", "1717 (905–2122)", "3",
+    "East Africa", "2598 (1960-3200)", "15 (6-25)", "976 (671–1078)", "1",
+    "South Asia", "85 (42-571)", "25 (9-39)", "1024 (808-1280)", "3"),
+  nrow = 3, ncol = 5, byrow = TRUE
+))
+
+names(tb) <- c("Research site", "Elevation (m)", "Temperature (°C)", "Precipitation (mm)", "Ecoregions")
+
+kable(tb, booktabs = TRUE, 
+      format = "simple",
+      caption = "Environmental characteristics of sampled locations across the research sites.")  
+  # kable_styling(latex_options = "hold_position",
+  #               position = "center",
+  #               font_size = 10) 
+```
+
+
 
 ## Farmers' climate awareness and adaptation strategies
 
-This part of the research was performed exclusively in Central America. In 2014, we performed a survey to 283 households participating in the Mesoamerican Environmental Program [@Gutierrez2020]. Farmers were questioned about their perceptions regarding changes in precipitation and temperature over the 10 years before the interviews (2005–2014). Farmers who reported to have felt changes in climatic patterns were asked to list the farm management practices they have adopted in their crop systems to cope with such changes. These practices were ranked by the order they were mentioned. We wanted to answer two main questions, (*i*) how accurate are the farmers' perceptions to climate change with observed time series data?, and (*ii*) how socioeconomic factors influence farmers' adaptation decisions?. 
+This part of the research was performed exclusively in Central America. In 2014, we performed a survey to 283 households participating in the Mesoamerican Environmental Program (MAP) [@Gutierrez2020]. Farmers were questioned about their perceptions regarding changes in precipitation and temperature over the 10 years before the interviews (2005–2014). Farmers who reported to have felt changes in climatic patterns were asked to list the farm management practices they have adopted in their crop systems to cope with such changes. These practices were ranked by the order they were mentioned. We wanted to answer two main questions, (*i*) how accurate are the farmers' perceptions to climate change with observed time series data?, and (*ii*) how socioeconomic factors influence farmers' adaptation decisions?. 
 
 To address the first question we linked the farmers responses as categorical variables (e.g. more precipitation, less precipitation, uncertain rain season) to a gridded time series precipitation database from the Climate Hazards Group InfraRed Precipitation with Station (CHIRPS) dataset [@Funk2015]. This database incorporates global daily rainfall from 1983 to near-present with a resolution of 2.5 arc-min, which is obtained by weather stations and combined with remote sensing. Changes in precipitation were assessed by calculating three extreme precipitation indices using an earlier version of the R [@RCoreTeam] package `climatrends` [@climatrends]. For this analysis we used the simple daily intensity index (SDII, total precipitation/rainy days), the maximum 5-day precipitation (Rx5day), and the maximum length of consecutive dry days (MLDS). The association of observed changes in precipitation and farmers’ perceptions was assessed using a multiple correspondence analysis using the R package `FactoMineR` [@Le2008].
 
@@ -149,24 +167,26 @@ The relative importance of the different strategies was measured using the Bradl
 
 Equation [1]
 
-$$P(i >j ) = \frac{p_i}{p_i + p_j}$$
-where $p_i$ is a positive real-valued score assigned to individual $i$. The comparison $i > j$ can be read as "$i$ is preferred over $j$".
+$$P (i \succ j) = \frac{p_i}{p_i + p_j}$$
 
-We used the top 5 strategies mentioned by each interviewed farmer and converted it into pairwise comparisons using an earlier version of the R package `gosset` [@gosset]. Socioeconomic variables were linked to the pairwise rankings using the Model-Based Recursive Partitioning approach [@Zeileis2008] implemented in R by the package `psychotree` [@Strobl2011]. The algorithm starts by fitting a Bradley-Terry model to the full data, then it assesses the stability of the worth parameters, if there is a significant instability, the full data is split by the covariate with strong instability. The process is repeated until there is no more significant instability [@Zeileis2008]. We linked six covariates: (*i*) the ecoregion (Dry or Rainforest), (*ii*) the Progress Out of Poverty Index (PPI), (*iii*) the literacy level of the head of household, (*iv*) the area of the main crop system (ha), (*v*) the age of the head of household, and (*vi*) the number of practices adopted by the farmers after participating in the Farmers Field Schools led by the Mesoamerican Environmental Program.
+where $p_i$ is a positive real-valued score assigned to individual $i$. The comparison $i \succ j$ can be read as "$i$ is preferred over $j$"
+
+We used the top 5 strategies mentioned by each interviewed farmer and converted it into pairwise comparisons using an earlier version of the R package `gosset` [@gosset]. Socioeconomic variables were linked to the pairwise rankings using the Model-Based Recursive Partitioning approach [@Zeileis2008] implemented in R by the package `psychotree` [@Strobl2011]. The algorithm starts by fitting a Bradley-Terry model to the full data, then it assesses the stability of the worth parameters, if there is a significant instability, the full data is split by the covariate with strong instability. The process is repeated until there is no more significant instability [@Zeileis2008]. We linked six covariates: (*i*) the ecoregion (Dry or Rainforest), (*ii*) the Progress Out of Poverty Index (PPI), (*iii*) the literacy level of the head of household, (*iv*) the area of the main crop system (ha), (*v*) the age of the head of household, and (*vi*) the number of practices adopted by the farmers after participating in the Farmers Field Schools led by MAP.
 
 
 ## Mapping future suitability of coffee and cocoa agroforestry
 
+This assessment focussed on Central America as a whole region, within the coordinates 101, 77 E, and 7, 22 N. We wanted to answer two main questions, (*i*) how ecologically resilient are the trees commonly used by farmers in coffee and cocoa agroforestry systems?, (*ii*) can cocoa become a potential suitable alternative for coffee growers?. To answer the first question we assessed the current and future potential distribution of the top-100 commonly used tree species in cocoa and coffee plantations across Central America. The selection of the 100 species was based on three criteria. The first was the abundance reported in relevant datasets of agroforestry inventories conducted in smallholder farms across the region [@Bonilla2014; @Orozco2014; @Sepulveda2016], selecting from the most abundant to the least. We then filtered the list of species based on ecological and economic services identified by farmers and reported in the literature [@CATIE2003], taxa were classified by their main use, N-fixing, timber or fruit. The last criterion was the availability of at least 60 geographical records to ensure accurate modelling results. To answer the second question we compared the current potential areas for coffee and cocoa production with their projected distribution under climate change scenarios. 
 
 
+To model the current distribution of the 100 species, coffee and cocoa we used bioclimatic predictors from WorldClim v1.4 [@Hijmans2005] at a spatial resolution of 2.5 arc-min. These bioclimatic variables are widely used in ecology to model the distribution of species based on their interaction with the variation in precipitation and temperature. To avoid model over-fitting we selected the least correlated variables based the variance inflation factors, retaining those with VIF < 10. This resulted in nine bioclimatic variables. Future projections were based on two Representative Concentration Pathways (RCP) scenarios of climate change [@vanVuuren2011], RCP4.5 as an intermediate scenario and RCP8.6 as a high emissions scenario. We used future bioclimatic variables downscaled from 17 General Circulation Models that were available for both RCP scenarios. 
+
+The distribution of the 100 species and coffee and cocoa was modelled using a consensus method implemented by the R package `BiodiversityR` [@Kindt2018]. The procedure consists of four steps [@Ranjitkar2014] that, first, calibrate the model by assessing the performance of 18 algorithms of species distribution models (SDM) measured with the area under the curve (AUC). The second step, consists in retaining only the algorithms that contributed at least in 5$\%$ to the whole consensus measured with the weighted AUC from each algorithm. The third step generates the suitability maps using the predictions from the algorithms that were selected in the second step. Finally, to generate the presence–absence layers, we convert the consensus suitability from the third step using the threshold of maximum specificity $+$ maximum sensitivity [@Liu2013]. 
 
 ## Evaluation of crop varieties
 
 
-Equation [1]
-
-$$P (i \succ j) = \frac{p_i}{p_i + p_j}$$
-where $p_i$ is a positive real-valued score assigned to individual $i$. The comparison $i \succ j$ can be read as "$i$ ranks higher than $j$" 
+ 
 
 
 Equation [2]
@@ -174,6 +194,7 @@ Equation [2]
 $$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
   
 # Genotype selection
+
 
 # Results and discussion
 
@@ -183,22 +204,31 @@ $$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
 
 ## Changing crop varieties
 
-**Table 1.** Performance of the 3D-breeding compared with the benchmark of a centralised genomic selection. 3D-breeding provides higher across-season goodness-of-fit (Kendall $\tau$) than centralised genomic selection on farmers’ overall appreciation (*OA*) and grain yield (*GY*). 
+```{r 3dbreeding, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
+tb <- as.data.frame(matrix(
+  c("Centralised GS","","",
+    "Season 1 (n=179)","0.134","-0.012",
+    "Season 2 (n=651)","0.105","0.076",
+    "Season 3 (n=335)","0.183","0.073",
+    "", "0.141 (± 0.039)","0.046 (± 0.049)",
+    "3D-breeding","","",
+    "Season 1 (n=179)","0.270","0.160",
+    "Season 2 (n=651)","0.276", "0.078",
+    "Season 3 (n=335)", "0.203", "0.119",
+    "", "0.251 (± 0.040)", "0.109 (± 0.041)"),
+  nrow = 10, ncol = 3, byrow = TRUE
+))
 
-| **Approach**	     | **OA**          |**GY**            | 
-| ------------------ |:---------------:|:----------------:|
-| **Centralised GS** |                 |                  |
-| Season 1 (n=179)   | 0.134           | -0.012           |
-| Season 2 (n=651)   | 0.105           | 0.076            |
-| Season 3 (n=335)   | 0.183           | 0.073            |
-|                    | **0.141 (± 0.039)** | **0.046 (± 0.049)**|
-| **3D-breeding **   |                 |                  |
-| Season 1 (n=179)   | 0.270           | 0.160            |
-| Season 2 (n=651)   | 0.276           | 0.078            |
-| Season 3 (n=335)   | 0.203           | 0.119            |
-|                    | **0.251 (± 0.040)** | **0.109 (± 0.041)**|
-  
-  
+names(tb) <- c("Approach", "OA", "GY")
+
+kable(tb,  
+      format = "pipe",
+      booktabs = TRUE,
+      align = "lcc",
+      caption = "Performance of the 3D-breeding compared with the benchmark of a centralised genomic selection. 3D-breeding provides higher across-season goodness-of-fit (Kendall $\\tau$) than centralised genomic selection on farmers’ overall appreciation (OA) and grain yield (GY)",
+      scape = FALSE)
+```
+
 # Conclusions
 
 # Future research and perspective
@@ -219,7 +249,7 @@ The research in the papers published alongside this work has been possible thank
 
 <div id="refs"></div>
   
-  \pagebreak
+\pagebreak
 
 # Appendices
 
@@ -240,12 +270,3 @@ The research in the papers published alongside this work has been possible thank
 
 \Huge \textbf{Paper IV}
 
-\pagebreak
-
-\Huge \textbf{Paper V}
-
-\pagebreak
-
-\Huge \textbf{Paper VI}
-
-\includepdf[pages={-}]{article-6/deSousa_etal_2020_chirps.pdf}
