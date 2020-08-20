@@ -137,9 +137,9 @@ In East Africa, the research was conducted in the regions of Amhara, Oromia and 
 
 ```{r site_chars, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
 tb <- as.data.frame(matrix(
-  c("Central America", "597 (190–1900)", "23 (17–29)", "1717 (905–2122)", "3",
-    "East Africa", "2598 (1960-3200)", "15 (6-25)", "976 (671–1078)", "1",
-    "South Asia", "85 (42-571)", "25 (9-39)", "1024 (808-1280)", "3"),
+  c("Central America", "597 (190–1,900)", "23 (17–29)", "1,717 (905–2,122)", "3",
+    "East Africa", "2,598 (1,960-3,200)", "15 (6-25)", "976 (671–1,078)", "1",
+    "South Asia", "85 (42-571)", "25 (9-39)", "1,024 (808-1,280)", "3"),
   nrow = 3, ncol = 5, byrow = TRUE
 ))
 
@@ -147,6 +147,7 @@ names(tb) <- c("Research site", "Elevation (m)", "Temperature (°C)", "Precipita
 
 kable(tb, booktabs = TRUE, 
       format = "simple",
+      align = "lcccc",
       caption = "Environmental characteristics of sampled locations across the research sites.")  
   # kable_styling(latex_options = "hold_position",
   #               position = "center",
@@ -176,10 +177,11 @@ We used the top 5 strategies mentioned by each interviewed farmer and converted 
 
 ## Mapping future suitability of coffee and cocoa agroforestry
 
-This assessment focussed on Central America as a whole region, within the coordinates 101, 77 E, and 7, 22 N. We wanted to answer two main questions, (*i*) how ecologically resilient are the trees commonly used by farmers in coffee and cocoa agroforestry systems?, (*ii*) can cocoa become a potential suitable alternative for coffee growers?. To answer the first question we assessed the current and future potential distribution of the top-100 commonly used tree species in cocoa and coffee plantations across Central America. The selection of the 100 species was based on three criteria. The first was the abundance reported in relevant datasets of agroforestry inventories conducted in smallholder farms across the region [@Bonilla2014; @Orozco2014; @Sepulveda2016], selecting from the most abundant to the least. We then filtered the list of species based on ecological and economic services identified by farmers and reported in the literature [@CATIE2003], taxa were classified by their main use, N-fixing, timber or fruit. The last criterion was the availability of at least 60 geographical records to ensure accurate modelling results. To answer the second question we compared the current potential areas for coffee and cocoa production with their projected distribution under climate change scenarios. 
+This assessment focussed on Central America as a whole region, within the coordinates 101, 77 E, and 7, 22 N. We wanted to answer two main questions, (*i*) how ecologically resilient are the trees commonly used by farmers in coffee and cocoa agroforestry systems?, (*ii*) can cocoa become a potential suitable alternative for coffee growers?. These questions came out as a result from the assessment on farmers' adaptation decisions described in the earlier section. Among all the other adaptation decisions, restoration and reforestation (using agroforestry) were the most preferred by the interviewed farmers [@deSousa2018]. 
 
+To answer the first question we assessed the current and future potential distribution of the top-100 commonly used tree species in cocoa and coffee plantations across Central America. The selection of the 100 species was based on three criteria. The first was the abundance reported in relevant datasets of agroforestry inventories conducted in smallholder farms across the region [@Bonilla2014; @Orozco2014; @Sepulveda2016], selecting from the most abundant to the least. We then filtered the list of species based on ecological and economic services identified by farmers and reported in the literature [@CATIE2003], taxa were classified by their main use, N-fixing, timber or fruit. The last criterion was the availability of at least 60 geographical records to ensure accurate modelling results. To answer the second question we compared the current potential areas for coffee and cocoa production with their projected distribution under climate change scenarios. 
 
-To model the current distribution of the 100 species, coffee and cocoa we used bioclimatic predictors from WorldClim v1.4 [@Hijmans2005] at a spatial resolution of 2.5 arc-min. These bioclimatic variables are widely used in ecology to model the distribution of species based on their interaction with the variation in precipitation and temperature. To avoid model over-fitting we selected the least correlated variables based the variance inflation factors, retaining those with VIF < 10. This resulted in nine bioclimatic variables. Future projections were based on two Representative Concentration Pathways (RCP) scenarios of climate change [@vanVuuren2011], RCP4.5 as an intermediate scenario and RCP8.6 as a high emissions scenario. We used future bioclimatic variables downscaled from 17 General Circulation Models that were available for both RCP scenarios. 
+Bioclimatic predictors from WorldClim v1.4 [@Hijmans2005] were used to model the current distribution of the 100 species, coffee and cocoa. These bioclimatic variables are widely used in ecology to model the distribution of species based on their interaction with the variation in precipitation and temperature [@Booth2018]. To avoid model over-fitting we selected the least correlated variables based the variance inflation factors, retaining those with VIF < 10. This resulted in nine bioclimatic variables. Future projections were based on two Representative Concentration Pathways (RCP) scenarios of climate change [@vanVuuren2011], RCP4.5 as an intermediate scenario and RCP8.6 as a high emissions scenario. We used future bioclimatic variables downscaled from 17 General Circulation Models that were available for both RCP scenarios. 
 
 The distribution of the 100 species and coffee and cocoa was modelled using a consensus method implemented by the R package `BiodiversityR` [@Kindt2018]. The procedure consists of four steps [@Ranjitkar2014] that, first, calibrate the model by assessing the performance of 18 algorithms of species distribution models (SDM) measured with the area under the curve (AUC). The second step, consists in retaining only the algorithms that contributed at least in 5$\%$ to the whole consensus measured with the weighted AUC from each algorithm. The third step generates the suitability maps using the predictions from the algorithms that were selected in the second step. Finally, to generate the presence–absence layers, we convert the consensus suitability from the third step using the threshold of maximum specificity $+$ maximum sensitivity [@Liu2013]. 
 
