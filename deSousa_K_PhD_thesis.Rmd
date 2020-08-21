@@ -66,6 +66,8 @@ RCP - Representative Concentration Pathways
 
 SDM - Species Distribution Model 
 
+TRICOT - Triadic Comparison of Technologies
+
 \pagebreak
 
 # List of papers
@@ -177,24 +179,64 @@ We used the top 5 strategies mentioned by each interviewed farmer and converted 
 
 ## Mapping future suitability of coffee and cocoa agroforestry
 
-This assessment focussed on Central America as a whole region, within the coordinates 101, 77 E, and 7, 22 N. We wanted to answer two main questions, (*i*) how ecologically resilient are the trees commonly used by farmers in coffee and cocoa agroforestry systems?, (*ii*) can cocoa become a potential suitable alternative for coffee growers?. These questions came out as a result from the assessment on farmers' adaptation decisions described in the earlier section. Among all the other adaptation decisions, restoration and reforestation (using agroforestry) were the most preferred by the interviewed farmers [@deSousa2018]. 
+This assessment focussed on Central America within the coordinates 101-77 E and 7-22 N. We wanted to answer two main questions, (*i*) how ecologically resilient are the trees commonly used by farmers in coffee and cocoa agroforestry systems?, (*ii*) can cocoa become a potential suitable alternative for coffee growers?. These questions came out as a result from the assessment on farmers' adaptation decisions described in the earlier section. Among the 10 adaptation decisions mentioned by the interviewed farmers, restoration and reforestation (using agroforestry) were the most preferred [@deSousa2018]. 
 
 To answer the first question we assessed the current and future potential distribution of the top-100 commonly used tree species in cocoa and coffee plantations across Central America. The selection of the 100 species was based on three criteria. The first was the abundance reported in relevant datasets of agroforestry inventories conducted in smallholder farms across the region [@Bonilla2014; @Orozco2014; @Sepulveda2016], selecting from the most abundant to the least. We then filtered the list of species based on ecological and economic services identified by farmers and reported in the literature [@CATIE2003], taxa were classified by their main use, N-fixing, timber or fruit. The last criterion was the availability of at least 60 geographical records to ensure accurate modelling results. To answer the second question we compared the current potential areas for coffee and cocoa production with their projected distribution under climate change scenarios. 
 
-Bioclimatic predictors from WorldClim v1.4 [@Hijmans2005] were used to model the current distribution of the 100 species, coffee and cocoa. These bioclimatic variables are widely used in ecology to model the distribution of species based on their interaction with the variation in precipitation and temperature [@Booth2018]. To avoid model over-fitting we selected the least correlated variables based the variance inflation factors, retaining those with VIF < 10. This resulted in nine bioclimatic variables. Future projections were based on two Representative Concentration Pathways (RCP) scenarios of climate change [@vanVuuren2011], RCP4.5 as an intermediate scenario and RCP8.6 as a high emissions scenario. We used future bioclimatic variables downscaled from 17 General Circulation Models that were available for both RCP scenarios. 
+Bioclimatic predictors from WorldClim v1.4 [@Hijmans2005] were used to model the current distribution of the 100 species, coffee and cocoa. These bioclimatic variables are widely used in ecology to model the distribution of species based on their interaction with the variation in precipitation and temperature [@Booth2018]. To avoid model overfitting we selected the least correlated variables based the variance inflation factors, retaining those with VIF < 10 [@Ranjitkar2014]. This resulted in nine bioclimatic variables. Future projections were based on two Representative Concentration Pathways (RCP) scenarios of climate change [@vanVuuren2011], RCP4.5 as an intermediate scenario and RCP8.6 as a high emissions scenario. We used future bioclimatic variables downscaled from 17 General Circulation Models that were available for both RCP scenarios. 
 
-The distribution of the 100 species and coffee and cocoa was modelled using a consensus method implemented by the R package `BiodiversityR` [@Kindt2018]. The procedure consists of four steps [@Ranjitkar2014] that, first, calibrate the model by assessing the performance of 18 algorithms of species distribution models (SDM) measured with the area under the curve (AUC). The second step, consists in retaining only the algorithms that contributed at least in 5$\%$ to the whole consensus measured with the weighted AUC from each algorithm. The third step generates the suitability maps using the predictions from the algorithms that were selected in the second step. Finally, to generate the presence–absence layers, we convert the consensus suitability from the third step using the threshold of maximum specificity $+$ maximum sensitivity [@Liu2013]. 
-
-## Evaluation of crop varieties
-
-
- 
-
+The distribution of the 100 species and coffee and cocoa was modelled using an ensemble suitability method implemented by the R package `BiodiversityR` [@Kindt2018]. The procedure consists of four steps that, first, calibrate the model by assessing the performance of 18 algorithms of species distribution models (SDM) measured with the area under the curve (AUC). In this step, the AUC values obtained by each algorithm are weighed using the following equation: 
 
 Equation [2]
 
+$$S_e = \frac{\sum_i w_i S_i}{\sum_i w_i}$$
+
+where the ensemble suitability ($S_e$) is obtained as a weighted ($w$) average of suitabilities predicted by the contributing algorithm ($S_i$).
+
+The second step, consists in retaining only the algorithms that contributed at least in 5$\%$ to the ensemble suitability ($S_e$). The third step generates the suitability maps using the predictions from the algorithms that were selected in the second step. Finally, to generate the presence–absence layers, we convert the consensus suitability from the third step using the threshold of maximum specificity $+$ maximum sensitivity [@Liu2013]. Replication data and code used in this analysis are available through Dataverse [@deSousa2018data].
+
+## Evaluation of crop varieties
+
+This part of the research was performed between 2012 and 2016 during three cropping seasons in Ethiopia, five cropping seasons in Nicaragua, and four cropping seasons in India (Table 2). The question that we addressed was whether on-farm participatory crop trials, scaled through a farmer citizen science approach, can provide robust, actionable information on varietal climate adaptation. This question aimed to respond to one open question in the assessment of farmers adaptation decisions where change in crop varieties (or crop variety management) showed to be one of the least choices in adaptation decisions among the farmers.
+
+```{r nplots, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
+tb <- as.data.frame(matrix(
+  c("2012","-","562","-","-","-",
+    "2013","176","4,134","-","-","-",
+    "2014","578","4,947","-","-","-",
+    "2015","336","834","-","481","177",
+    "2016","-","-","64","87","33"),
+  nrow = 5, ncol = 6, byrow = TRUE
+))
+
+names(tb) <- c("Research Site", "Ethiopia", "India", "Primera", "Apante", "Postrera")
+
+kable(tb,  
+      #format = "pipe",
+      booktabs = TRUE,
+      align = "lccccc",
+      caption = "Number of tricot trials per cropping season of durum wheat (Ethiopia, Meher season), bread wheat (India, Rabi season), and common beans (Nicaragua, Primera, Apante and Postrera seasons).") %>% 
+  add_header_above(c(" " = 3, "Nicaragua" = 3)) %>% 
+  kable_styling(latex_options = "hold_position")
+```
+
+
+We compiled data from 12,409 farmer-managed trials across the research sites. Trial design followed the triadic comparison of technologies (tricot) approach [@vanEtten2019tricot]. The approach follows five principles:  (**i**) anonymous subsets of three varieties (out of a larger set) are allocated randomly as incomplete blocks [@Atlin2001]; (*ii*) participants receive one subset to grow in their farms under their own management practices (Figure 2); (*iii*) plots are set up within the crop system, plots are small to facilitate participation but large enough to avoid strong edge effects; (**iv**) participants indicate the relative performance of varieties through ranking answering to two short statements for each targeted characteristic (e.g. which variety had the best leaf development? which variety had worst leaf development?); (**v**) data from each farmer-managed plot is collated into a single dataset.
+
+For the analysis of the ranking data generated by farmers, we used the Plackett–Luce model [@Luce1959; @Plackett1975], implemented in R with the package `PlackettLuce` [@Turner2020]. Alike the Bradley-Terry model explained in the previous section, the Plackett-Luce model estimates the worth parameter, but in that case it is estimated as the probability that one item (a variety) wins against all the others in the permutation (Bradley-Terry measures as pairwise comparison). The model determines the values of positive-valued parameters $\alpha_i$ (worth) associated with each variety $i$. These parameters $\alpha$ are related to the probability that variety $i$ wins against all other n varieties in the following way:
+
+Equation [3]
+
 $$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
-  
+
+
+```{r tricotdesign, fig.cap="Randomization and subset allocation in the tricot approach. Three varieties are randomly selected from a larger group and anonymised with the labels A, B, C, participants receive the anonymous subset to evaluated in their farms under their own management practices.", echo=FALSE, out.width = '90%', fig.align="center"}
+knitr::include_graphics("display-items/tricot_design.png")
+```
+
+
+Replication data and code used in this analysis are available through Dataverse [@vanettenreplic]
+
 # Genotype selection
 
 
@@ -260,13 +302,30 @@ The research in the papers published alongside this work has been possible thank
 
 \Huge \textbf{Paper I}
 
+```{r paper1, echo=FALSE, out.width = '100%', fig.align="center"}
+knitr::include_graphics("display-items/paper1.jpg")
+```
+
+\normalsize Overview of the agricultural landscape in Copán, Honduras
+
 \includepdf[pages={-}]{article-1/deSousa_etal_2018_rural_studies.pdf}
 
 \Huge \textbf{Paper II}
 
+```{r paper2, echo=FALSE, out.width = '100%', fig.align="center"}
+knitr::include_graphics("display-items/paper2.jpg")
+```
+\normalsize Coffee agroforestry system in El Cuá, Nicaragua
+
 \includepdf[pages={-}]{article-2/deSousa_etal_2019_scientific_reports.pdf}
 
 \Huge \textbf{Paper III}
+
+```{r paper3, echo=FALSE, out.width = '100%', fig.align="center"}
+knitr::include_graphics("display-items/paper3.png")
+```
+
+\normalsize Farmer-managed plot under the tricot approach, Honduras
 
 \includepdf[pages={-}]{article-3/vanEtten_deSousa_etal_2019_pnas.pdf}
 
