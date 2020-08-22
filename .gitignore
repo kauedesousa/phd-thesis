@@ -38,6 +38,7 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+.log
 
 # markdown outputs
 deSousa_K_PhD_thesis.pdf

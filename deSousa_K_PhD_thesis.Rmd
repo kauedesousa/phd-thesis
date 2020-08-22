@@ -107,9 +107,9 @@ Climate change increases the risks and uncertainties associated with agriculture
 
 **What is the future of current agroforestry combinations in coffee and cocoa production systems? (Paper II)**
 
-Agroforestry, the deliberate and simultaneous management of trees within crop or livestock systems, is considered an important climate-adapted innovation to increase the resilience of agricultural systems [@Nair1993; @Spurgeon1979]. Trees can ameliorate the micro-climate and facilitate the performance of understory crops [@Holmgren2010]. Most perennial crop systems in Central America (e.g. coffee and cocoa) are managed following agroforestry practices [@Beer1998; @Somarriba2013], and have been increasingly encouraged as climate change is projected to affect future crop production [@OvalleRivera2015]. Nevertheless, climate change can also affect the future ecological niches of several tree species [@Holmgren2013; @Lyra2017] and may restrain the prospects of agroforestry as a viable approach for climate adaptation. Paper II [@deSousa2019] assesses the future of the 100 most common tree species found in coffee and cocoa production systems in Central America.
+Agroforestry, the deliberate and simultaneous management of trees within crop or livestock systems, is considered an important climate-adapted innovation to increase the resilience of agricultural systems [@Nair1993; @Spurgeon1979]. Trees can ameliorate the micro-climate and facilitate the performance of understory crops [@Holmgren2010]. Most perennial crop systems in Central America are managed following agroforestry practices [@Beer1998; @Somarriba2013], and have been increasingly encouraged as climate change is projected to affect future crop production [@OvalleRivera2015]. Nevertheless, climate change can also affect the future ecological niches of several tree species [@Holmgren2013; @Lyra2017] and may restrain the prospects of agroforestry as a viable approach for climate adaptation. Paper II [@deSousa2019] assesses the future of the 100 most common tree species found in coffee (*Coffea arabica* L.) and cocoa (*Theobroma cacao* L.) production systems in Central America.
 
-**Can cocoa became a suitable alternative in vulnerable coffee production areas? (Paper III)**
+**Can cocoa become a suitable alternative in vulnerable coffee production areas? (Paper III)**
 
 As climate change projections points to a decline in coffee production due to the increasingly climate variability [@OvalleRivera2015; @Bunn2015; @Laderach2017], farmers has developed a taste for cocoa. The drivers of this shift are trends in recent years of increasing coffee production costs and large loses due to pests and diseases (e.g. leaf rust crisis) [@Avelino2015]. Replacing coffee by cocoa has become one of the main strategies for climate change adaptation for producers in low elevation areas [@Laderach2017]. Nevertheless, there is no quantitative assessment of the feasibility of such strategy, starting from considering that cocoa is vulnerable to climate change itself [@Schroth2016]. Paper II [@deSousa2019] also explore this strategy assessing the potential areas where cocoa is a suitable alternative to coffee.
 
@@ -126,16 +126,13 @@ To adapt to climate change farmers require accelerated selection of genotypes an
 
 ## Research sites
 
-The studies took place in three different regions, Central America, East Africa and South Asia (Fig. 1). The regions are characterised by its rich plant diversity being *Centre of Origin* and domestication [@Vavilov] of important staples and crops such as wheat, durum wheat, rice, common beans, maize, coffee and cocoa. Smallholder agriculture and livestock production are the main livelihood for the majority of the population. Poverty and food insecurity levels are still among the higher in the world. According to the 2019's report on the State of Food Security and Nutrition [@SOFI2019], in 2018 Central America, East Africa and South Asia, respectively, had a prevalence of severe or moderate food insecurity for 31.5%, 62.7% and 34.3% of their total population. 
+The studies took place in three different regions, Central America, East Africa and South Asia (Fig. 1). The regions are characterised by its rich plant diversity being *Centre of Origin* and domestication [@Vavilov] of important staples and crops such as common beans (*Phaseolus vulgaris* L.), durum wheat (*Triticum durum* Desf.), maize (*Zea mays* L.), rice (*Oryza sativa* L.), wheat (*Triticum aestivum* L.), coffee and cocoa. Smallholder agriculture and livestock production are the main livelihood for the majority of the population. Poverty and food insecurity levels are still among the higher in the world. According to the 2019's report on the State of Food Security and Nutrition [@SOFI2019], in 2018 Central America, East Africa and South Asia, respectively, had a prevalence of severe or moderate food insecurity for 31.5%, 62.7% and 34.3% of their total population. 
 
 ```{r fig1, fig.cap="Research sites. (A) Overview. (B) India. (C) Central America. (D) Ethiopia. Farms included in the trials or interviews are indicated as dots.", echo=FALSE, out.width = '90%', fig.align="center"}
 knitr::include_graphics("display-items/Fig1_ResearchSites.png")
 ```
 
-Field data was collected between 2010 and 2016 as part of several Research for Development programs performed across the regions. In Central America, farmer's surveys were conducted in El Salvador, Guatemala, Honduras and Nicaragua. A subset of participatory crop trials were conducted in Nicaragua. Sampled farmers extended across three ecological regions [@Olson2001], the Central American Atlantic Moist Forests, the Central American Dry Forests and the Central American Pine-Oak Forests. Important crops grown by smallholders in the region are maize, common bean, sorghum, banana, coffee and cocoa, the two later grown for the international markets, while the others for local markets and household consumption. 
-
-In East Africa, the research was conducted in the regions of Amhara, Oromia and Tigray in Ethiopia, which encompasses one main ecological region, the Ethiopian Montane Grasslands and Woodlands. The main crop grown by smallholder farmers in this region are durum wheat, teff, barley and sorghum, mostly for household consumption and local markets. In South Asia, the research was conducted across the States of Bihar, Madhya Pradesh and Uttar Pradesh encompassing three ecological regions, the Upper Gangetic Plains Moist Deciduous Forests, the Lower Gangetic Plains Moist Deciduous Forests, and the Narmada Valley Dry Deciduous Forests. The main crop grown by smallholders are rice, wheat, maize, and several pulses and vegetables. Table 1 presents a description on the environmental characteristics of each region extracted from the sampled locations used in this research. 
-
+Field data was collected between 2010 and 2016 as part of several Research for Development programs performed across the regions. In Central America, farmer's surveys were conducted in El Salvador, Guatemala, Honduras and Nicaragua. A subset of participatory crop trials were conducted in Nicaragua. Sampled farmers extended across three ecological regions [@Olson2001], the Central American Atlantic Moist Forests, the Central American Dry Forests and the Central American Pine-Oak Forests. Important crops grown by smallholders in the region are maize, common bean, sorghum (*Sorghum bicolor* (L.) Moench), banana (*Musa* spp.), coffee and cocoa, the last two grown for the international markets, while the others for local markets and household consumption. 
 
 ```{r site_chars, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
 tb <- as.data.frame(matrix(
@@ -148,14 +145,15 @@ tb <- as.data.frame(matrix(
 names(tb) <- c("Research site", "Elevation (m)", "Temperature (°C)", "Precipitation (mm)", "Ecoregions")
 
 kable(tb, booktabs = TRUE, 
-      format = "simple",
       align = "lcccc",
-      caption = "Environmental characteristics of sampled locations across the research sites.")  
-  # kable_styling(latex_options = "hold_position",
-  #               position = "center",
-  #               font_size = 10) 
+      caption = "Environmental characteristics of sampled locations across the research sites.") %>% 
+  kable_styling(latex_options = "hold_position",
+                position = "center",
+                font_size = 9) 
 ```
 
+
+In East Africa, the research was conducted in the regions of Amhara, Oromia and Tigray in Ethiopia, which encompasses one main ecological region, the Ethiopian Montane Grasslands and Woodlands. The main crop grown by smallholder farmers in this region are durum wheat, teff (*Eragrostis tef* (Zucc.) Trotter), barley (*Hordeum vulgare* L.) and sorghum, mostly for household consumption and local markets. In South Asia, the research was conducted across the States of Bihar, Madhya Pradesh and Uttar Pradesh in India encompassing three ecological regions, the Upper Gangetic Plains Moist Deciduous Forests, the Lower Gangetic Plains Moist Deciduous Forests, and the Narmada Valley Dry Deciduous Forests. The main crop grown by smallholders are rice, wheat, maize, and several pulses and vegetables. Table 1 presents a description on the environmental characteristics of each region extracted from the sampled locations used in this research. 
 
 
 ## Farmers' climate awareness and adaptation strategies
@@ -211,21 +209,18 @@ tb <- as.data.frame(matrix(
 
 names(tb) <- c("Research Site", "Ethiopia", "India", "Primera", "Apante", "Postrera")
 
-kable(tb,  
-      #format = "pipe",
+kable(tb, 
       booktabs = TRUE,
       align = "lccccc",
       caption = "Number of tricot trials per cropping season of durum wheat (Ethiopia, Meher season), bread wheat (India, Rabi season), and common beans (Nicaragua, Primera, Apante and Postrera seasons).") %>% 
   add_header_above(c(" " = 3, "Nicaragua" = 3)) %>% 
-  kable_styling(latex_options = "hold_position")
+  kable_styling(latex_options = "hold_position",
+                position = "center",
+                font_size = 9)
 ```
 
 
 We compiled data from 12,409 farmer-managed plots across the research sites. Trial design followed the triadic comparison of technologies (tricot) approach [@vanEtten2019tricot]. The approach follows five principles:  (*i*) anonymous subsets of three varieties (out of a larger set) are allocated randomly as incomplete blocks [@Atlin2001]; (*ii*) participants receive one subset to grow in their farms under their own management practices (Figure 2); (*iii*) plots are set up within the crop system, plots are small to facilitate participation but large enough to avoid strong edge effects; (*iv*) participants indicate the relative performance of varieties through ranking answering to two short statements for each targeted characteristic (e.g. which variety had the best leaf development? which variety had worst leaf development?); (*v*) data from each farmer-managed plot is collated into a single dataset.
-
-```{r tricotdesign, fig.cap="Randomization and subset allocation in the tricot approach. Three varieties are randomly selected from a larger group and anonymised with the labels A, B, C, participants receive the anonymous subset to evaluated in their farms under their own management practices.", echo=FALSE, out.width = '90%', fig.align="center"}
-knitr::include_graphics("display-items/tricot_design.png")
-```
 
 For the analysis of the ranking data generated by farmers, we used the Plackett–Luce model [@Luce1959; @Plackett1975], implemented in R with the package `PlackettLuce` [@Turner2020]. Alike the Bradley-Terry model explained in the previous section, the Plackett-Luce model estimates the worth parameter, but in that case it is estimated as the probability that one item (a variety) wins against all the others in the permutation (Bradley-Terry measures as pairwise comparison). The model determines the values of positive-valued parameters $\alpha_i$ (worth) associated with each variety $i$. These parameters $\alpha$ are related to the probability that variety $i$ wins against all other n varieties in the following way:
 
@@ -236,6 +231,11 @@ $$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
 Climatic variables were linked to the rankings using the Model-Based Recursive Partitioning approach [@Zeileis2008] implemented in R by the package `psychotree` [@Strobl2011] which builds the Plackett-Luce trees. This process is explained in the previous section on farmers' adaptation decisions. For the climatic variables, we used free publicly available datasets with coverage across all the research sites to make comparable studies. We derived rainfall and temperature indices using an earlier version of the R package `climatrends` [@climatrends]. Rainfall was obtained using the CHIRPS dataset [@Funk2015], while temperature was obtained from MODIS MYD11A2 [@Wan2015]. The MODIS data was provided in its raw format, to reduce noise and fill gaps, we used the adaptive Savitzky-Golay filter with a window size of 12 for the polynomial smoothing [@Chen2004].
 
 Fourteen climatic variables were extracted for the vegetative, reproductive and grain filling period and the whole growth period (from planting date to harvesting) in each observation point. This resulted in 100 variables. To create models that provide generalizable predictions across seasons, we used blocked cross-validation (with seasons as blocks) combined with a forward variable selection procedure [@Meyer2018]. We used the deviance values of each validation season to calculate an Akaike weight, which is the probability that a given variable combination represents the best model [@Wagenmakers2004]. We performed forward variable selection, using this combined Akaike weight as our selection criterion. From each study case (country) this procedure retained one variable, which were the maximum night temperature ($^\circ$C) during the vegetative and reproductive periods for common beans in Nicaragua, the minimum night temperature ($^\circ$C) during the vegetative period for durum wheat in Ethiopia, and the diurnal temperature range ($^\circ$C) during the vegetative period for wheat in India. 
+
+```{r tricotdesign, fig.cap="Randomization and subset allocation in the tricot approach. Three varieties are randomly selected from a larger group and anonymised with the labels A, B, C, participants receive the anonymous subset to evaluated in their farms under their own management practices.", echo=FALSE, out.width = '90%', fig.align="center"}
+knitr::include_graphics("display-items/tricot_design.png")
+```
+
 
 We compared the goodness-of-fit of the model with climatic variables (climate model) against three other models. The first with no covariates (intercept only model), the second with geolocation, season, planting dates, and soil categories, which represented the experimental design (design model). And the third model with a combination of climatic variables plus geolocation (climate + geolocation model). To compare the models, we calculated a weighted average of pseudo-$R^2$ (deviance reduction) values across testing seasons [@Agresti2002], using the square root of the sample size as weights [@Whitlock2005]. All this process was done using an earlier version of the R package `gosset` [@gosset]. Replication data and code used in this analysis are available through Dataverse [@vanettenreplic]
 
@@ -267,12 +267,13 @@ tb <- as.data.frame(matrix(
 
 names(tb) <- c("Approach", "OA", "GY")
 
-kable(tb,  
-      format = "pipe",
+kable(tb, 
       booktabs = TRUE,
       align = "lcc",
-      caption = "Performance of the 3D-breeding compared with the benchmark of a centralised genomic selection. 3D-breeding provides higher across-season goodness-of-fit (Kendall $\\tau$) than centralised genomic selection on farmers’ overall appreciation (OA) and grain yield (GY)",
-      scape = FALSE)
+      caption = "Performance of the 3D-breeding compared with the benchmark of a centralised genomic selection. 3D-breeding provides higher across-season goodness-of-fit (Kendall $\\tau$) than centralised genomic selection on farmers’ overall appreciation (OA) and grain yield (GY)") %>% 
+  kable_styling(latex_options = "hold_position",
+                position = "center",
+                font_size = 9) 
 ```
 
 # Conclusions
@@ -303,7 +304,7 @@ The research in the papers published alongside this work has been possible thank
 
 
 \Huge \textbf{Paper I}
-
+\
 ```{r paper1, echo=FALSE, out.width = '100%', fig.align="center"}
 knitr::include_graphics("display-items/paper1.jpg")
 ```
@@ -313,7 +314,7 @@ knitr::include_graphics("display-items/paper1.jpg")
 \includepdf[pages={-}]{article-1/deSousa_etal_2018_rural_studies.pdf}
 
 \Huge \textbf{Paper II}
-
+\
 ```{r paper2, echo=FALSE, out.width = '100%', fig.align="center"}
 knitr::include_graphics("display-items/paper2.jpg")
 ```
@@ -322,12 +323,12 @@ knitr::include_graphics("display-items/paper2.jpg")
 \includepdf[pages={-}]{article-2/deSousa_etal_2019_scientific_reports.pdf}
 
 \Huge \textbf{Paper III}
-
+\
 ```{r paper3, echo=FALSE, out.width = '100%', fig.align="center"}
 knitr::include_graphics("display-items/paper3.png")
 ```
 
-\normalsize Farmer-managed plot under the tricot approach, Honduras
+\normalsize Farmer evaluating a common beans plot under the *tricot* approach, Honduras
 
 \includepdf[pages={-}]{article-3/vanEtten_deSousa_etal_2019_pnas.pdf}
 
