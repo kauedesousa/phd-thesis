@@ -3,15 +3,14 @@ library("rgdal")
 library("dismo")
 library("sp")
 library("tidyverse")
+library("climatrends")
+library("nasapower")
 
 el <- stack("/Volumes/BioversityInt/rasters/GloElev_30as/GloElev_30as.asc")
 temp <- stack("/Volumes/BioversityInt/rasters/worldclim2_0_30s/wc2.0_bio_30s_01.tif")
-maxtemp <- stack("/Volumes/BioversityInt/rasters/worldclim2_0_30s/wc2.0_bio_30s_05.tif")
-mintemp <- stack("/Volumes/BioversityInt/rasters/worldclim2_0_30s/wc2.0_bio_30s_06.tif")
-prec <- stack("/Volumes/BioversityInt/rasters/worldclim2_0_30s/wc2.0_bio_30s_12.tif")
-maxprec <- stack("/Volumes/BioversityInt/rasters/worldclim2_0_30s/wc2.0_bio_30s_13.tif")
-minprec <- stack("/Volumes/BioversityInt/rasters/worldclim2_0_30s/wc2.0_bio_30s_14.tif")
 eco <- readOGR("/Volumes/BioversityInt/shapefiles/tnc_terr_ecoregions", "tnc_terr_ecoregions")
+r <- raster()
+
 
 dt1 <- read.csv("data/research_sites/anexo3_farm_ids.csv")
 dt1$region <- "ca"
@@ -31,18 +30,6 @@ table(dt$region)
 
 dt$elevation <- as.vector(raster::extract(el, dt[,c("lon","lat")]))
 
-dt$temp <- as.vector(raster::extract(temp, dt[,c("lon","lat")]))
-
-dt$maxtemp <- as.vector(raster::extract(maxtemp, dt[,c("lon","lat")]))
-
-dt$mintemp <- as.vector(raster::extract(mintemp, dt[,c("lon","lat")]))
-
-dt$prec <- as.vector(raster::extract(prec, dt[,c("lon","lat")]))
-
-dt$maxprec <- as.vector(raster::extract(maxprec, dt[,c("lon","lat")]))
-
-dt$minprec <- as.vector(raster::extract(minprec, dt[,c("lon","lat")]))
-
 coord <- dt[,c("lon","lat")]
 
 proj <- proj4string(eco)
@@ -53,13 +40,30 @@ dt$ecoregion <- over(coord, eco)$ECO_NAME
 
 dt <- as.data.frame(dt)
 
+# climatic data
+coord <- dt[,c("lon","lat")]
+
+coord <- gridSample(coord, r, n = 1)
+
+ids <- rownames(coord)
+
+
+temp <- temperature(coord, 
+                    day.one = "2000-01-01",
+                    last.day = "2019-12-01", 
+                    timeseries = TRUE, 
+                    intervals = 365)
+
+
+rain <- rainfall(coord, 
+                 day.one = "2000-01-01",
+                 last.day = "2019-12-01", 
+                 timeseries = TRUE, 
+                 intervals = 365)
+
 dt <- as_tibble(dt)
 
 dt
-
-ind <- getData('GADM', country=c('IND'), level=1)
-
-table(over(coord, ind)$NAME_1)
 
 
 dt %>% 
