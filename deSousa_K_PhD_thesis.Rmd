@@ -247,7 +247,7 @@ This research was performed in Ethiopia from 2012 to 2015 with durum wheat. The 
 
 Centralised trials were performed in 2012 and 2013 in the districts of Geregera (Amhara) and Hagreselam (Tigray). In 2012, thirty experienced smallholder farmers growing durum wheat (15 men and 15 women) were invited to participate in the trial evaluations at the station plots, held concurrently after flowering stage. The farmers had no previous knowledge of the genotypes included in this study to prevent bias in the evaluations. The participants provided appraisal with Likert scales (1 to 5 worse to best) [@Likert1932] given to genotypes for overall appreciation (OA) [@Mancini2017; @Kidane2017]. Research technicians measured grain yield (GY) as grams of grain produced per plot, then converted into $t \cdot ha^{-1}$. Absolute values of GY and OA measured in centralised trials were converted into ordinal rankings.
 
-```{r 3dbreeding_design, fig.cap = "Centralised breeding (A) derives recommendations from breeders’ evaluation and possibly participatory assessments in a limited set of stations, using genomics to accelerate the production of varieties that are eventually recommended with coarse spatial resolution. We propose 3D-breeding as a decentralised approach (B) where breeders and farmers select the best candidate genotypes to be tested in small, blinded and randomized sets producing scalable solutions that can be linked to genomics, farmers’ knowledge and environmental data, to enhance the local adaptation of the resulting varieties and tailor their recommendation throughout the landscape.", echo=FALSE, out.width = '90%', fig.align="center"}
+```{r 3dbreeding_design, fig.cap = "Centralised breeding (A) derives recommendations from breeders’ evaluation and possibly participatory assessments in a limited set of stations, using genomics to accelerate the production of varieties that are eventually recommended with coarse spatial resolution. This system may become more efficient if complemented by 3D-breeding (B), a decentralised approach where the best candidate genotypes are tested by farmers in small, blinded and randomized sets. 3D-breeding produces scalable solutions that can be linked to genomics, farmers’ knowledge and environmental data, to enhance the local adaptation of the resulting varieties and tailor their recommendation to the landscape.", echo=FALSE, out.width = '90%', fig.align="center"}
 knitr::include_graphics("display-items/3dbreeding.png")
 ```
 
@@ -318,7 +318,7 @@ Given the uncertainties of the multiple effects of climate change in agriculture
 
 Several studies in Africa and Asia investigated the reason for uptake (or non uptake) of agricultural innovations among smallholder farmers [@Singh2017; @Elum2017; @Meijer2015; @Senyolo2018], the lack of knowledge [@Meijer2015] and high costs [@Senyolo2018] are pointed out as main reasons for non uptake of innovations, among other things. We show that the participation in long-term outreach projects can influence farmers’ decision to uptake sustainable practices by improving the knowledge on adoption approaches. 
 
-costs can not turn down so ealy since it envolves many other factors beyond farmers control, however the  reduced risk with tailored advice
+costs can not turn down so easily since it involves many other factors beyond farmers control, however the  reduced risk with tailored advice
 
 
 ## Diversifying with trees 
@@ -419,3 +419,5 @@ knitr::include_graphics("display-items/paper4.jpg")
 ```
 
 \normalsize Durum wheat in a participatory variety selection plot in Tigray, Ethiopia. Credit: M. Dell'Acqua
+
+\includepdf[pages={-}]{article-4/deSousa_etal_manuscript.pdf}
