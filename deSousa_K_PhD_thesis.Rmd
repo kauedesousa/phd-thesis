@@ -310,7 +310,7 @@ Cost is a factor the involves multiple factors beyond farmers' control and canno
 
 Overall, when facing changes in climate, farmers decided to adopt a set of sustainable climate-friendly practices to cope with the negative effects of climate change. The utilisation of more fertilizers and pesticides may be a controversial choice, but is likely to be associated with sustainable farm intensification, which helps smallholders in increase productivity [@Cassman1999] while reducing the need to expand the production to new crop areas. The adoption of for sustainable practices is likely to be associated with the participation in long-term outreach projects which supports farmers in enhancing their learning about the landscape [@Baumann2020] and led farmers' decisions towards sustainable practices [@Gutierrez2015].
 
-## Diversifying with trees 
+## The future of coffee and cocoa agroforestry
 
 Coffee and cocoa are perennial crop with high vulnerability to climate variability. In a first glance, we looked for the future suitability of coffee and cocoa across Central America. The results showed that, by 2050, between 55–62% of current areas for coffee production will likely become unsuitable (Fig. 5A), especially in mid-altitudinal areas (400–700 m a.s.l.). Highlands (>1,800 m a.s.l.) may partly compensate these losses, where coffee will likely expand up to 9–13%. This result confirms the findings of from previous studies on coffee vulnerability [@Bunn2015; @OvalleRivera2015]. 
 
@@ -321,17 +321,29 @@ knitr::include_graphics("display-items/change_suitability.png")
 
 In contrast, cocoa is likely to lose between 13–17% of the current distribution range (Fig. 5B) especially in dry lowland areas (0–300 m a.s.l.), expected to become drier in the next decades [@Lyra2017]. Humid areas along the Atlantic coast will remain suitable for cocoa, and present an overlap with a portion of vulnerable coffee areas, showing that cocoa could potentially replace 85% of the vulnerable coffee areas (Fig. 6). 
 
-```{r cocoa_replace, fig.cap = "Potential areas where cocoa (\\emph{Theobroma cacao} L.) can replace coffee (\\emph{Coffea arabica} L.) under climate change.", echo=FALSE, out.width = '60%', fig.align="center"}
+```{r cocoa_replace, fig.cap = "Potential areas where cocoa (\\emph{Theobroma cacao} L.) can replace coffee (\\emph{Coffea arabica} L.) under climate change.", echo=FALSE, out.width = '70%', fig.align="center"}
 knitr::include_graphics("display-items/cocoa_replace_coffee.png")
 ```
 
-
-* The impacts could be lower than we expect [@DaMatta2019]
-* Robusta seemed an alternative but is also vulnerable [@Kath2020]
-* Ecological issues in expanding to higher elevations
+Even as a current trend, changing coffee with cocoa is a dramatic alternative for most smallholder farmers in the region. It implies a series of barriers and require well-structured efforts to reduce the costs of transformation (maybe subsidised by the cocoa industry) and ensure that farmers are well trained to deliver a product that meets the market requirements [@Levai2015], to name a few. Additionally, a recent study showed that the impacts of climate change on coffee could be lower than what was projected [@DaMatta2019]. For example, with the increase of $CO_2$ availability, new varieties with local adaptation and technological changes. Is important to note that projections based on ecological niches, as the object of our study, do not take into account site-specific ecological factors, and should be used as a proxy to identify vulnerable areas and define adaptation strategies, like those discussed by DaMatta et al. [-@DaMatta2019]. 
 
 
+Alternatively, by managing agroforestry systems, farmers could potentially maintain their current coffee and cocoa plantations using suitable trees to ameliorate microclimatic conditions. This alternative could also prevent the expansion of agricultural activities towards protected areas that are reported to be suitable in the future [@Schroth2015]. Although it may require a change in the current agroforestry combinations given the projections showing a high vulnerability of the most preferred tree species (Fig. 7). 
 
+
+```{r trees_suitability, fig.cap = "Expected changes in suitability due to climate change of the most common (\\textbf{A}) fruit trees, (\\textbf{B}) N-fixing trees and (\\textbf{C}) timber trees in coffee (\\emph{Coffea arabica} L.) and cocoa (\\emph{Theobroma cacao} L.) plantations in Central America. Grey dot represent the area of a given species under the current climate conditions. Red arrows (left direction), represent decrease in suitable areas. Blue arrows (right direction) represent increase in suitable areas. Species ordered by main use and by their abundance (from top to bottom) in the inventoried coffee and cocoa farms across Central America.", echo=FALSE, out.width = '100%', fig.align="center"}
+knitr::include_graphics("display-items/trees_suitability.png")
+```
+
+
+
+For coffee, areas with high potential to select tree species from a portfolio of at least 10 species per main use include the highlands across the ecological zones in Mexico in the Pine-Oak Forests and Petén-Veracruz Moist Forests of Chiapas, Guerrero, Oaxaca, Veracruz and Puebla. In Guatemala, areas with high potential include Quiché, Alta Verapaz, Jalapa, Chimaltenango and Huehuetenango. In Honduras, the Pine-Oak Forests and Mountain Forests of Francisco Morazán, Intibuca, Comayagua, La Paz and Olancho. For Nicaragua, we identify high potential in Jinotega, Estelí, Matagalpa and Madriz. In Costa Rica in the Talamancan Montane Forests of San Jose, Heredia, Alajuela, Cartago, and Puntarenas.
+
+Vulnerable areas for coffee by the 2050s (where coffee is expected to lose suitability) with high potential for agroforestry (at least 10 species per main use) cover the midlands in Mexico in the Petén-Veracruz Moist Forests, the Central American Mountain Forests and Pine-Oak Forests of Chiapas, Oaxaca, and Veracruz. In Guatemala, across Alta Verapaz, Izabal, and Suchitepequez. For Nicaragua, across Atlantico Sur. In Costa Rica, across Puntarenas and San Jose. And, the province of Chiriqui in Panama. Areas with high vulnerability (< 3 species per main use) are identified across the midlands Pine-Oak Forests and Dry Forests of Honduras (Comayagua, Paraíso, Yoro and Lempira), Nicaragua (Nueva Segovia, Jinotega and Madriz), El Salvador (La Libertad and Santa Ana) and highlands in Mexico (Oaxaca and Morelos).
+
+For cocoa, areas with high potential for selecting trees from a portfolio of more than 30 species (10 per main use) cover all the humid tropical forest at lowlands across the Pacific coast in Costa Rica, Atlantic coast in Nicaragua, Mosquitia in Honduras, Belize, lowlands north of Cobán and south of Sierra Madre in Guatemala and lowlands in the Gulf of Mexico. There is also a high potential for selecting more than 30 species across the transition zones of the Central American Moist Forests and Central American dry forests in Nicaragua (Atlantico Sur), Guatemala (Quetzaltenango), the Dry Forests of El Salvador (Ahuachapan, Sonsonate and Usulutan) and the Moist Forests of Costa Rica (Limon). Vulnerable cocoa areas with low agroforestry options (< 3 species), are identified across the Dry Forest of Honduras (Comayagua, Yoro and Nueva Segovia).
+
+Some authors argued that in some cases cocoa agroforestry is less resilient to extreme climates than cocoa in full sun [@Abdulai2017], and despite the clear controversies in the study [@Norgrove2018], the main message is that a bad arrangement may hamper the known benefits [@Andres2018; @Blaser2018] of agroforestry. The work of Padovan et al. [-@Padovan2015] studying root interactions and water utilisation in coffee agroforestry in a dry region of Nicaragua can bring more light to understanding the crop $\times$ tree interactions that are, mostly, unknown in agroforestry. Agroforestry is a "new science", with its first studies being reported in late 1970's [@Spurgeon1979], and there is number of opportunities to be explored. More recently, for example, Sauvadet et al. [-@Sauvadet2020] used an approach with phylogenetic analyses that may help in selecting the most appropriate shade trees in cocoa agroforestry systems. The utilisation of the functional diversity approach [@Diaz2016; @Suarez2018] linked to farmers knowledge [@Cerdan2012], can also answer a series of open questions on how shade trees interact with crops (during their different phenological stages) and how to design climate-adapted agroforestry systems.
 
 ## Changing crop varieties
 
