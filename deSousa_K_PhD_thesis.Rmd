@@ -166,7 +166,7 @@ To address the first question we linked the farmers responses as categorical var
 
 The second question was answered by linking the farmers prioritised adaptation management strategies with their socioeconomic information. Household socioeconomic data was obtained by the baseline survey performed with all farmers for the Mesoamerican Environmental Program. From the adaptation strategies derived from all responses, we compiled a list of 10 options: (*i*) Change in Agricultural Calendar, (*ii*) Change in Varieties, (*iii*) Production Diversification, (*iv*) Introduction of New Crops, (*v*) Less Fertilizers and Pesticides, (*vi*) Reforestation and Restoration, (*vii*) Sustainable Soil Management, (*viii*) Sustainable Water Management, (*ix*) Leave Farming System, and (*x*) More Fertilizers and Pesticides. 
 
-The relative importance of the different strategies was measured using the Bradley-Terry model [@Bradley1952], which estimates the *worth parameter* (relative importance) in pairwise comparisons which can be described using the following equation. 
+The relative importance of the different strategies was measured using the Bradley-Terry model [@Bradley1952], which estimates the *worth* parameter (relative importance) in pairwise comparisons which can be described using the following equation. 
 
 Equation [1]
 
@@ -174,7 +174,7 @@ $$P (i \succ j) = \frac{p_i}{p_i + p_j}$$
 
 where $p_i$ is a positive real-valued score assigned to individual $i$. The comparison $i \succ j$ can be read as "$i$ is preferred over $j$"
 
-We used the top 5 strategies mentioned by each interviewed farmer and converted it into pairwise comparisons using an alpha version of the R package `gosset` [@gosset]. Socioeconomic variables were linked to the pairwise rankings using the Model-Based Recursive Partitioning approach [@Zeileis2008] implemented in R by the package `psychotree` [@Strobl2011]. The algorithm starts by fitting a Bradley-Terry model to the full data, then it assesses the stability of the *worth parameters*, if there is a significant instability, the full data is split by the covariate with strong instability. The process is repeated until there is no more significant instability [@Zeileis2008]. We linked six covariates: (*i*) the ecoregion (Dry or Rainforest), (*ii*) the Progress Out of Poverty Index (PPI), (*iii*) the literacy level of the head of household, (*iv*) the area of the main crop system (ha), (*v*) the age of the head of household, and (*vi*) the number of practices adopted by the farmers after participating in the Farmers Field Schools led by MAP.
+We used the top 5 strategies mentioned by each interviewed farmer and converted it into pairwise comparisons using an alpha version of the R package `gosset` [@gosset]. Socioeconomic variables were linked to the pairwise rankings using the Model-Based Recursive Partitioning approach [@Zeileis2008] implemented in R by the package `psychotree` [@Strobl2011]. The algorithm starts by fitting a Bradley-Terry model to the full data, then it assesses the stability of the *worth* parameters, if there is a significant instability, the full data is split by the covariate with strong instability. The process is repeated until there is no more significant instability [@Zeileis2008]. We linked six covariates: (*i*) the ecoregion (Dry or Rainforest), (*ii*) the Progress Out of Poverty Index (PPI), (*iii*) the literacy level of the head of household, (*iv*) the area of the main crop system (ha), (*v*) the age of the head of household, and (*vi*) the number of practices adopted by the farmers after participating in the Farmers Field Schools led by MAP.
 
 
 ## Mapping future suitability of coffee and cocoa agroforestry
@@ -199,6 +199,8 @@ The second step, consists in retaining only the algorithms that contributed at l
 
 This part of the research was performed between 2012 and 2016 during three cropping seasons in Ethiopia, five cropping seasons in Nicaragua, and four cropping seasons in India (Table 2). Three crops were evaluated, common beans in Nicaragua, durum wheat in Ethiopia and wheat in India. The question that we addressed was whether on-farm participatory crop trials, scaled through a farmer citizen science approach, can provide robust, actionable information on varietal climate adaptation. This aimed to respond to one open question in the assessment of farmers' adaptation decisions where change in crop varieties (or crop variety management) showed to be one of the least choices in adaptation decisions among the farmers.
 
+We compiled data from 12,409 farmer-managed plots across the research sites. Trial design followed the *tricot* approach, standing for triadic comparison of technologies [@vanEtten2019tricot]. The approach follows five principles:  (*i*) anonymous subsets of three varieties (out of a larger set) are allocated randomly as incomplete blocks [@Atlin2001]; (*ii*) participants receive one subset to grow in their farms under their own management practices (Figure 2); (*iii*) plots are set up within the crop system, plots are small to facilitate participation but large enough to avoid strong edge effects; (*iv*) participants indicate the relative performance of varieties through ranking answering to two short statements for each targeted characteristic (e.g. which variety had the best leaf development? which variety had worst leaf development?); (*v*) data from each farmer-managed plot is collated into a single dataset.
+
 ```{r nplots, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
 tb <- as.data.frame(matrix(
   c("2012","-","562","-","-","-",
@@ -216,20 +218,18 @@ kable(tb,
       align = "lccccc",
       caption = "Number of tricot trials per cropping season of durum wheat (Ethiopia, Meher season), bread wheat (India, Rabi season), and common beans (Nicaragua).") %>% 
   add_header_above(c(" " = 3, "Nicaragua" = 3)) %>% 
-  kable_styling(#latex_options = "hold_position",
+  kable_styling(latex_options = "hold_position",
                 position = "center",
                 font_size = 9)
 ```
 
-
-We compiled data from 12,409 farmer-managed plots across the research sites. Trial design followed the *tricot* approach, standing for triadic comparison of technologies [@vanEtten2019tricot]. The approach follows five principles:  (*i*) anonymous subsets of three varieties (out of a larger set) are allocated randomly as incomplete blocks [@Atlin2001]; (*ii*) participants receive one subset to grow in their farms under their own management practices (Figure 2); (*iii*) plots are set up within the crop system, plots are small to facilitate participation but large enough to avoid strong edge effects; (*iv*) participants indicate the relative performance of varieties through ranking answering to two short statements for each targeted characteristic (e.g. which variety had the best leaf development? which variety had worst leaf development?); (*v*) data from each farmer-managed plot is collated into a single dataset.
-
-For the analysis of the ranking data generated by farmers, we used the Plackett–Luce model [@Luce1959; @Plackett1975], implemented in R with the package `PlackettLuce` [@Turner2020]. Alike the Bradley-Terry model, explained in the previous section, the Plackett-Luce model estimates the *worth parameter*, but in that case it is estimated as the probability that one item (a variety) wins against all the others in the permutation (Bradley-Terry measures as pairwise comparison). The model determines the values of positive-valued parameters $\alpha_i$ (worth) associated with each variety $i$. These parameters $\alpha$ are related to the probability that variety $i$ wins against all other $n$ varieties in the following way:
+For the analysis of the ranking data generated by farmers, we used the Plackett–Luce model [@Luce1959; @Plackett1975], implemented in R with the package `PlackettLuce` [@Turner2020]. Alike the Bradley-Terry model, explained in the previous section, the Plackett-Luce model estimates the *worth* parameter, but in that case it is estimated as the probability that one item (a variety) wins against all the others in the permutation (Bradley-Terry measures as pairwise comparison). The model determines the values of positive-valued parameters $\alpha_i$ (worth) associated with each variety $i$. These parameters $\alpha$ are related to the probability that variety $i$ wins against all other $n$ varieties in the following way:
 
 Equation [3]
 
 $$P(i \succ \{j, ..., n\}) = \frac{a_i}{a_1 + ... + a_n}$$
 \
+
 Climatic variables were linked to the rankings using the Model-Based Recursive Partitioning approach [@Zeileis2008] implemented in R by the package `psychotree` [@Strobl2011] which builds the Plackett-Luce trees. This process is explained in the previous section on farmers' adaptation decisions. For the climatic variables, we used free publicly available datasets with coverage across all the research sites to make comparable studies. We derived rainfall and temperature indices using an alpha version of the R package `climatrends` [@climatrends]. Rainfall was obtained using the CHIRPS dataset [@Funk2015], while temperature was obtained from MODIS MYD11A2 [@Wan2015]. The MODIS data was provided in its raw format, to reduce noise and fill gaps, we used the adaptive Savitzky-Golay filter with a window size of 12 for the polynomial smoothing [@Chen2004].
 
 Fourteen climatic variables were extracted for the vegetative, reproductive and grain filling period and the whole growth period (from planting date to harvesting) in each observation point. This resulted in 100 variables. To create models that provide generalizable predictions across seasons, we used blocked cross-validation (with seasons as blocks) combined with a forward variable selection procedure [@Meyer2018]. We used the deviance values of each validation season to calculate an Akaike weight, which is the probability that a given variable combination represents the best model [@Wagenmakers2004]. We performed forward variable selection, using this combined Akaike weight as our selection criterion. From each study case (country) this procedure retained one variable, which were the maximum night temperature ($^\circ$C) during the vegetative and reproductive periods for common beans in Nicaragua, the minimum night temperature ($^\circ$C) during the vegetative period for durum wheat in Ethiopia, and the diurnal temperature range ($^\circ$C) during the vegetative period for wheat in India. 
@@ -263,17 +263,17 @@ The statistical model that represented 3D-breeding was developed using the data 
 
 ## Farmers' adaptation decisions
 
-In Central America, 255 farmers (out of 283) reported to perceived changes in climate patterns over the 10 years prior to the survey (2005–2014). The multiple correspondence analysis of farmers’ perceptions versus anomalies from observed data shows partial correlations between farmers’ perceptions and the time series data (Figure 4). Farmers who reported to perceive an uncertainty on the start/end of the rainy season correlate with observed decrease in heavy precipitation (Rx5day) and an increase of the duration of consecutive dry days (MLDS). Farmers who reported to perceive less annual precipitation correlate with observed increase in heavy precipitation. Those who reported to perceive more precipitation or heavy precipitation did not correlate with any of the observed precipitation indices.
+In Central America, 255 farmers (out of 283) reported to perceived changes in climate patterns over the 10 years prior to the survey (2005–2014). The multiple correspondence analysis of farmers’ perceptions versus anomalies from observed data shows partial correlations between farmers’ perceptions and the time series data (Figure 4). Farmers who perceived an uncertainty on the start/end of the rainy season correlate with observed decrease in heavy precipitation (Rx5day) and an increase of the duration of consecutive dry days (MLDS). Farmers who perceived less annual precipitation correlate with observed increase in heavy precipitation. Those who perceived more precipitation or heavy precipitation did not correlate with any of the observed precipitation indices.
 
-The partial correlations in observed and perceived climate may be explained by the difficulty to properly observe the changes as they occur without the aid of measuring devices (e.g. weather station, garden moisture meter), absence of climate services [@Bouroncle2019] or cognitive bias. However, even if farmers do not perfectly perceive these changes in climate patterns, they do observe reductions in their yields and at times losses of their crops, which draws their attention to climate-related issues and increases their willingness to innovate and try new farm management practices. Previous studies reported this behaviour as a product of experiencing climatic risks or disasters [@Bergquist2019; @vanValkengoed2019].
+The partial correlations in observed and perceived climate may be explained by the difficulty to properly observe the changes, as they occur, without the aid of measuring devices (*e.g.* weather station, garden moisture meter), absence of climate services [@Bouroncle2019] or cognitive bias [@Holmgren2018bias]. However, even if farmers do not perfectly perceive these changes in climate patterns, they do observe reductions in their yields and at times losses of their crops, which draws their attention to climate-related issues and increases their willingness to innovate and try new farm management practices. Previous studies reported this behaviour as a product of experiencing climatic risks or disasters [@Bergquist2019; @vanValkengoed2019].
 
 ```{r perception_vs_observed, fig.cap = "Correspondence between farmers’ perception on changes in precipitation and observed anomalies in precipitation indices over 2005–2014 in the sampled locations across Central America. MLDS, maximum length of consecutive dry days (< 1 mm); Rx5day, maximum 5-day precipitation (mm); SDII, simple annual precipitation index (mm/day).", echo=FALSE, out.width = '60%', fig.align="center"}
 knitr::include_graphics("display-items/perception_vs_observed.png")
 ```
 
-In the case of interviewed farmers in Central America, there was a list of 10 practices that were adapted upon the perception of changes in climate patterns. The *worth parameters* for the adaptation practices show significant differences between the ranked options (Table 3). Practices of *Reforestation and Restoration*, *Introduction of New Crops*, and *Sustainable Soil Management* were reported as the most preferred choices among interviewed farmers, showing higher worth than the reference *Production Diversification*. One of the most recommended adaptation strategy for farmers in seasonal crop systems [@Challinor2016; @Atlin2017], *Change in varieties*, had a lower worth than the reference. The other practices were ranked below the reference, with *Leave Farming System* and *Change Agricultural Calendar* on the bottom of preferred practices to adapt to perceived changes in climatic patterns. 
+In the case of interviewed farmers in Central America, there was a list of 10 practices that were adapted upon the perception of changes in climate patterns. The *worth* parameters for the adaptation practices show significant differences between the ranked options (Table 3). Practices of *Reforestation and Restoration*, *Introduction of New Crops*, and *Sustainable Soil Management* were reported as the most preferred choices among interviewed farmers, showing higher *worth* than the reference *Production Diversification*, which is one of the most recommended adaptation strategy for farmers in seasonal crop systems [@Challinor2016; @Atlin2017; @vanZonneveld2020]. *Change in varieties*, had a lower *worth* than the reference. The other practices were ranked below the reference, with *Leave Farming System* and *Change Agricultural Calendar* on the bottom of preferred practices to adapt to perceived changes in climatic patterns. 
 
-Same observed in Africa and Asia
+Reforestation was the preferred choice among farmers independent of education profiles, farm size, and ecological region. This practice had an interplay with agroforestry, where farmers intentionally planted trees or allowed then to grow through natural regeneration within their crop systems. Several studies have reported agroforestry among the best climate change adaptation strategies [@Mbow2014a; @Mbow2014b; @Verchot2007; @Blaser2018; @Lipper2014], it includes both mitigation and adaptation by providing carbon sink, microclimate regulation and protection to extreme climate events [@Caudill2015; @Holmgren2010; @Torres2017]. Farmers, however, have a clear preference to few marketable species or that has a clear utility within the crop system [@Ordonez2014; @Cerdan2012]. Some studies have shown that climate change can also affect the suitability of tree species [@Lyra2017; @deSousa2017Atlas] and hind the benefits of agroforestry as an adaptation strategy.
 
 ```{r worth_bt, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
 tb <- as.data.frame(matrix(
@@ -296,7 +296,7 @@ kable(tb,
       booktabs = TRUE,
       align = "lcccc",
       caption = "Bradley-Terry model estimates from farmers’ management practices employed to adapt crop systems to perceived changes in climate patterns in Central America.") %>% 
-  kable_styling(#latex_options = "hold_position",
+  kable_styling(latex_options = "hold_position",
                 position = "center",
                 font_size = 9) %>% 
   row_spec(4, bold = TRUE) %>% 
@@ -304,24 +304,33 @@ kable(tb,
            general_title = "")
 ```
 
+Change in varieties was the least choice in the top-5 options reported by farmers in Central America. The low uptake of this approach reflects the weakness of formal and informal seed systems in supporting smallholders to select the right variety [@McGuire2016], mainly the informal seed systems, as it is expected to provide higher contribution for local adaptation [@Bellon2001]. Costs and the high risk associated with crop variety managements by smallholders farmers are also among the reasons for the low uptake. Several studies in Africa and Asia investigated the reason for uptake (or non uptake) of agricultural innovations among smallholder farmers [@Singh2017; @Elum2017; @Meijer2015; @Senyolo2018], the lack of knowledge [@Meijer2015] and high costs [@Senyolo2018], among other things, were also pointed out as main reasons for non uptake of innovations, such as crop variety management. Smallholder farming also have an intrinsic characteristic of being performed in diverse low-input systems [@Lowder2016], which makes the challenge of recommending (or producing new) crop varieties more problematic and risky. 
 
-Reforestation was the preferred choice among farmers independent of education profiles, farm size, and ecological region. This practice had an interplay with agroforestry, where farmers intentionally plant trees or allow then to grow through natural regeneration within their crop systems. Several studies have reported agroforestry among the best climate change adaptation strategies [@Mbow2014a, @Mbow2014b; @Verchot2007; @Blaser2018; @Lipper2014], it includes both mitigation and adaptation by providing carbon sink, microclimate regulation and protection to extreme climate events [@Caudill2015; @Holmgren2010; @Torres2017]. Farmers, however, have a clear preference to few marketable species or that has a clear utility within the crop system [@Ordonez2014; @Cerdan2012]. Some studies have shown that climate change can also affect the suitability of tree species [@Lyra2017; @deSousa2017Atlas] and hind the benefits of agroforestry as an adaptation strategy.
+Cost is a factor the involves multiple factors beyond farmers' control and cannot being reduced so easily [@Chapagain2020]. However, risks in selecting crop varieties could be reduced with tailored advice. Recent experiences in Central America, Africa and Asia provided new evidence that this challenge can be addressed by scalling agricultural experimentation with citizen science [@vanEtten2019tricot; @Beza2017; @Steinke2017]. These studies showed positive prospects that citizen science could support seed systems in tracking the responses of crop systems to the changing climate patterns as they occur in the farm and take the best decision towards climate adaptation. The sub-section "Changing crop varieties" shows the insights that I provided with my research in extending the knowledge on the opportunities of this approach for smallholders farms.
 
-Changing agricultural calendar was one of the least preferred choices among interviewed farmers, which is unfortunate, as it is one of the simplest approaches to adapt to the effects of climate variability (Yegbemey et al., 2014). By adopting this approach, farmers can adjust the planting season to operate in a time-efficient manner and avoid extreme climatic events during sensitive growing phases, such as flowering (Sacks et al., 2010). The low preference for this approach may be the result of the scarce up-to-date agroclimatic information and forecasts on upcoming growing seasons, which are also in accordance with the partial correlations between farmers perceptions and the historical data observed in our analysis. The establishment of information services and early warning systems to provide seasonal forecasting and agroclimatic information can help farmers make the best decisions to adapt their systems under seasonal climate variability. 
-
-
-
-Although farmers demonstrated awareness to climate change and to its effects the lack of up-do-date agroclimatic information is still an issue that hinders making the best decision regarding crop management, especially for the annual crops. The promotion of community weather stations can help farmers obtain accurate information regarding the climate and thus close this information gap. Furthermore, local and international development agencies and NGOs should make use of the weather information and models already available to foster the adoption of short and long-term technological packages tailored to specific ecoregions.
-
-
-Given the uncertainties of the multiple effects of climate change in agriculture (Howden et al., 2007; Vermeulen et al., 2013), farmers and stakeholders must be constantly updated about the latest recommendations for each climatic region and for each crop activity. Recent experiences with citizen-science in Central America, Africa and Asia (Beza et al., 2017; Mancini et al., 2017; Steinke et al., 2017; Steinke and van Etten, 2017; van Etten et al., 2016) showed that farmers and decision-makers can track the responses of crop systems to the changing climate patterns as they occur in the farm and take the best decision towards climate adaptation. 
-
-Several studies in Africa and Asia investigated the reason for uptake (or non uptake) of agricultural innovations among smallholder farmers [@Singh2017; @Elum2017; @Meijer2015; @Senyolo2018], the lack of knowledge [@Meijer2015] and high costs [@Senyolo2018] are pointed out as main reasons for non uptake of innovations, among other things. We show that the participation in long-term outreach projects can influence farmers’ decision to uptake sustainable practices by improving the knowledge on adoption approaches. 
-
-costs can not turn down so easily since it involves many other factors beyond farmers control, however the  reduced risk with tailored advice
-
+Overall, when facing changes in climate, farmers decided to adopt a set of sustainable climate-friendly practices to cope with the negative effects of climate change. The utilisation of more fertilizers and pesticides may be a controversial choice, but is likely to be associated with sustainable farm intensification, which helps smallholders in increase productivity [@Cassman1999] while reducing the need to expand the production to new crop areas. The adoption of for sustainable practices is likely to be associated with the participation in long-term outreach projects which supports farmers in enhancing their learning about the landscape [@Baumann2020] and led farmers' decisions towards sustainable practices [@Gutierrez2015].
 
 ## Diversifying with trees 
+
+Coffee and cocoa are perennial crop with high vulnerability to climate variability. In a first glance, we looked for the future suitability of coffee and cocoa across Central America. The results showed that, by 2050, between 55–62% of current areas for coffee production will likely become unsuitable (Fig. 5A), especially in mid-altitudinal areas (400–700 m a.s.l.). Highlands (>1,800 m a.s.l.) may partly compensate these losses, where coffee will likely expand up to 9–13%. This result confirms the findings of from previous studies on coffee vulnerability [@Bunn2015; @OvalleRivera2015]. 
+
+```{r suitability_coffee_cocoa, fig.cap = "Shifts in suitability due to climate change by 2050 across the altitudinal gradient of (\\textbf{A}) coffee (\\emph{Coffea arabica} L.) and (\\textbf{B}) cocoa (\\emph{Theobroma cacao} L.) in Central America", echo=FALSE, out.width = '80%', fig.align="center"}
+knitr::include_graphics("display-items/change_suitability.png")
+```
+
+
+In contrast, cocoa is likely to lose between 13–17% of the current distribution range (Fig. 5B) especially in dry lowland areas (0–300 m a.s.l.), expected to become drier in the next decades [@Lyra2017]. Humid areas along the Atlantic coast will remain suitable for cocoa, and present an overlap with a portion of vulnerable coffee areas, showing that cocoa could potentially replace 85% of the vulnerable coffee areas (Fig. 6). 
+
+```{r cocoa_replace, fig.cap = "Potential areas where cocoa (\\emph{Theobroma cacao} L.) can replace coffee (\\emph{Coffea arabica} L.) under climate change.", echo=FALSE, out.width = '60%', fig.align="center"}
+knitr::include_graphics("display-items/cocoa_replace_coffee.png")
+```
+
+
+* The impacts could be lower than we expect [@DaMatta2019]
+* Robusta seemed an alternative but is also vulnerable [@Kath2020]
+* Ecological issues in expanding to higher elevations
+
+
 
 
 ## Changing crop varieties
@@ -347,7 +356,7 @@ kable(tb,
       booktabs = TRUE,
       align = "lcc",
       caption = "Performance of the 3D-breeding compared with the benchmark of a centralised genomic selection. 3D-breeding provides higher across-season goodness-of-fit (Kendall $\\tau$) than centralised genomic selection on farmers’ overall appreciation (OA) and grain yield (GY)") %>% 
-  kable_styling(#latex_options = "hold_position",
+  kable_styling(latex_options = "hold_position",
                 position = "center",
                 font_size = 9) 
 ```
