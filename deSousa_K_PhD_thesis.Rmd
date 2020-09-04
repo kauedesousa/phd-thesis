@@ -343,7 +343,7 @@ Overall, the results of our study are just a starting point to develop lines of 
 
 ## Crop variety management
 
-We then looked on how to define adaptation strategies in seasonal crops. First we tested whether the model with climatic variables was able to outperform the other three models tested with the farmer-generated rankings. The three case studies each provide independent confirmation of the predictive value of the *tricot* trials (Table 4), the model with only climate covariates has the best fit in all cases. Various factors influenced model fit, including farmers’ observation skills and environmental variation. We found that most of the differences were among countries, likely due to the different levels of diversity with the sets of varieties. In Ethiopia, farmers evaluated a large poll of varieties with easily observable differences in performance, while in Nicaragua and India, farmers evaluated a small set of varieties with relatively homogeneous performance.
+We then looked on how to define adaptation strategies in seasonal crops. First we tested whether the model with climatic variables was able to outperform the other three models tested with the farmer-generated rankings. The three case studies provided independent confirmation of the predictive value of the *tricot* trials (Table 4), the model with only climate covariates has the best fit in all cases. Various factors influenced model fit, including farmers’ observation skills and environmental variation. We found that most of the differences were among countries, likely due to the different levels of diversity with the sets of varieties. In Ethiopia, farmers evaluated a large poll of varieties with easily observable differences in performance, while in Nicaragua and India, farmers evaluated a small set of varieties with relatively homogeneous performance.
 
 ```{r climate_best, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
 tb <- as.data.frame(matrix(
@@ -367,13 +367,12 @@ kable(tb,
 ```
 
 
-The results demonstrated the ability of the model with climatic covariates in capture the environmental variability of the sampled environments. This means that the climatic covariates contain unique and substantial information explaining varietal performance. For Nicaragua, we found that common bean variety performance changed when the maximum night temperature exceeded 18.7 $^\circ C$. This finding corresponds to the threshold temperature for heat stress reported in the literature of 20 $^\circ C$ at night [@Rainey2005].
+The results demonstrated the ability of the model with climatic covariates to capture the environmental variability of the sampled environments. This means that the climatic covariates contain unique and substantial information explaining varietal performance. For Nicaragua, we found that common bean variety performance changed when the maximum night temperature exceeded 18.7 $^\circ C$. For durum wheat in Ethiopia, varietal performance were related to cold night temperatures during the vegetative period, threshold of 8.4 $^\circ C$. For bread wheat in India, varietal performance patterns changed with the diurnal temperature range (DTR) during the vegetative period, which is the difference between minimum and maximum daily temperatures, under two thresholds 14.5 $^\circ C$ and 15.7 $^\circ C$. These findings correspond to the threshold temperature for heat stress or cold acclimatisation reported in the literature [@Rainey2005; @Fowler2008; @Rao2015]. 
 
-For durum wheat in Ethiopia, varietal differences in performance were related to the lowest night temperature during the vegetative period (SI Appendix, Fig. S2). Performance patterns changed when at least one 8-day period had average night temperatures under 8.4 °C. This temperature corresponds to the threshold temperatures for vernalization and cold acclimation induction (19). 
-
-For bread wheat in India, varietal performance patterns changed with the diurnal temperature range (DTR) during the vegetative period, which is the difference between minimum and maximum daily temperatures (SI Appendix, Fig. S3). Splits occurred at DTR values of 14.5 °C and 15.7 °C. Consistent with our results, a study has shown that DTR explains a substantial share of wheat yield variation in India (20).
+recommendations
 
 
+the approach can be used in agroecological intensification [@Nelson2020]
 
 
 ```{r 3dbreeding, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
@@ -414,6 +413,11 @@ knitr::include_graphics("display-items/workflow.png")
 # Conclusions
 
 # Future research and perspective
+
+* Open questions on new agroforestry designs
+* Adoption rates of crop varieties and underutilised trees
+* Potential to use the citizen science data with crop models
+
   
 \pagebreak
 
