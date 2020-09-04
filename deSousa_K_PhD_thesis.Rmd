@@ -367,7 +367,11 @@ kable(tb,
 ```
 
 
+The results demonstrated the ability of the model with climatic covariates in capture the environmental variability of the sampled environments. This means that the climatic covariates contain unique and substantial information explaining varietal performance. For Nicaragua, we found that common bean variety performance changed when the maximum night temperature exceeded 18.7 $^\circ C$. This finding corresponds to the threshold temperature for heat stress reported in the literature of 20 $^\circ C$ at night [@Rainey2005].
 
+For durum wheat in Ethiopia, varietal differences in performance were related to the lowest night temperature during the vegetative period (SI Appendix, Fig. S2). Performance patterns changed when at least one 8-day period had average night temperatures under 8.4 °C. This temperature corresponds to the threshold temperatures for vernalization and cold acclimation induction (19). 
+
+For bread wheat in India, varietal performance patterns changed with the diurnal temperature range (DTR) during the vegetative period, which is the difference between minimum and maximum daily temperatures (SI Appendix, Fig. S3). Splits occurred at DTR values of 14.5 °C and 15.7 °C. Consistent with our results, a study has shown that DTR explains a substantial share of wheat yield variation in India (20).
 
 
 
