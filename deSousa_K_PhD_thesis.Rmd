@@ -59,6 +59,8 @@ RCP - Representative Concentration Pathways
 
 SDM - Species Distribution Model 
 
+SNP - Single Nucleotide Polymorphism
+
 TRICOT - Triadic Comparison of Technologies
 
 \pagebreak
@@ -309,7 +311,7 @@ Overall, when facing changes in climate, farmers decided to adopt a set of susta
 
 Coffee and cocoa are perennial crop with high vulnerability to climate variability. In a first glance, we looked for the future suitability of coffee and cocoa across Central America. The results showed that, by 2050, between 55–62% of current areas for coffee production will likely become unsuitable (Fig. 5A), especially in mid-altitudinal areas (400–700 m a.s.l.). Highlands (>1,800 m a.s.l.) may partly compensate these losses, where coffee will likely expand up to 9–13%. This result confirms the findings of previous studies on Arabica coffee vulnerability [@Bunn2015; @OvalleRivera2015]. 
 
-```{r suitability_coffee_cocoa, fig.cap = "Shifts in suitability due to climate change by 2050 across the altitudinal gradient of (\\textbf{A}) coffee (\\emph{Coffea arabica} L.) and (\\textbf{B}) cocoa (\\emph{Theobroma cacao} L.) in Central America", echo=FALSE, out.width = '80%', fig.align="center"}
+```{r suitability_coffee_cocoa, fig.cap = "Shifts in suitability due to climate change by 2050 across the altitudinal gradient of (A) coffee (\\emph{Coffea arabica} L.) and (B) cocoa (\\emph{Theobroma cacao} L.) in Central America", echo=FALSE, out.width = '80%', fig.align="center"}
 knitr::include_graphics("display-items/change_suitability.png")
 ```
 
@@ -324,7 +326,7 @@ Even as a current trend [@Renteria2016; @Cohen2016; @Gross2014], changing coffee
 
 Alternatively, by managing agroforestry systems, farmers could potentially maintain their current coffee and cocoa plantations using suitable trees to ameliorate microclimatic conditions. This alternative could also prevent the expansion of agricultural activities towards protected areas that are reported to be suitable in the future [@Schroth2015]. Although it may require a change in the current agroforestry combinations given our projections showing a high vulnerability of the most preferred tree species (Fig. 7). 
 
-```{r trees_suitability, fig.cap = "Expected changes in suitability due to climate change of the most common (\\textbf{A}) fruit trees, (\\textbf{B}) N-fixing trees and (\\textbf{C}) timber trees in coffee (\\emph{Coffea arabica} L.) and cocoa (\\emph{Theobroma cacao} L.) plantations in Central America. Grey dot represent the area of a given species under the current climate conditions. Red arrows (left direction), represent decrease in suitable areas. Blue arrows (right direction) represent increase in suitable areas. Species ordered by main use and by their abundance (from top to bottom) in the inventoried coffee and cocoa farms across Central America.", echo=FALSE, out.width = '100%', fig.align="center"}
+```{r trees_suitability, fig.cap = "Expected changes in suitability due to climate change of the most common (A) fruit trees, (B) N-fixing trees and (C) timber trees in coffee (\\emph{Coffea arabica} L.) and cocoa (\\emph{Theobroma cacao} L.) plantations in Central America. Grey dot represent the area of a given species under the current climate conditions. Red arrows (left direction), represent decrease in suitable areas. Blue arrows (right direction) represent increase in suitable areas. Species ordered by main use and by their abundance (from top to bottom) in the inventoried coffee and cocoa farms across Central America.", echo=FALSE, out.width = '100%', fig.align="center"}
 knitr::include_graphics("display-items/trees_suitability.png")
 ```
 
@@ -375,7 +377,7 @@ The results demonstrated the ability of the model with climatic covariates to ca
 Following these results we showed that the climatic analysis can improve variety recommendations by incorporating seasonal forecasts, and generate variety recommendations for wider areas trough spatial extrapolation (Fig. 8 A, B, C). For Nicaragua we show that official variety recommendations fail to identify superior bean varieties that are sufficiently heat tolerant for the study area. In Ethiopia, the findings can improve variety recommendations for durum wheat by uncovering the importance of cold adaptation. In India, the analysis of the tricot trial data adds geographic specificity to the existing variety recommendations and suggests that a broader set of wheat varieties should be promoted to take into account the climatic differences across the study area. We quantified how much farmers could benefit from the variety recommendations by calculating variety reliability, the probability of outperforming a check variety. For each location, we compared the recommendations produced in the study with the previous recommendations as the check. Reliabilities ranged from 0.59 to 0.65 in Ethiopia, from 0.58 to 0.60 in Nicaragua, and from 0.51 to 0.62 in India (Fig. 8 D, E, F), indicating substantial benefits for large areas.
 
 
-```{r recommendations, fig.cap = "Citizen science can improve variety recommendations. Top two varieties for each area according to their probability of winning over a base period (2002–2016), in (\\textbf{A}) Nicaragua, (\\textbf{B}) Ethiopia and (\\textbf{C}) India. Probability of outperforming (reliability) existing varietal recommendations by using crop varieties recommendations generated with the tricot citizen science approach in (\\textbf{D}) Nicaragua, (\\textbf{E}) Ethiopia and (\\textbf{F}) India.", echo=FALSE, out.width = '90%', fig.align="center"}
+```{r recommendations, fig.cap = "Citizen science can improve variety recommendations. Top two varieties for each area according to their probability of winning over a base period (2002–2016), in (A) Nicaragua, (B) Ethiopia and (C) India. Probability of outperforming (reliability) existing varietal recommendations by using crop varieties recommendations generated with the tricot citizen science approach in (D) Nicaragua, (E) Ethiopia and (F) India.", echo=FALSE, out.width = '90%', fig.align="center"}
 knitr::include_graphics("display-items/recommendation_reliability.png")
 ```
 
@@ -437,7 +439,7 @@ The ClimMob platform (https://climmob.net/blog/) storages the *tricot* data in t
 
 For the other tools, we focused on generalisation, which means that they can be used in other domains outside the the proposed workflow. First, we moved the data analysis from Bradley-Terry model to Plackett-Luce, since, unlike the former, it considerer the entire permutation instead of pairwise comparisons, allowing for fast computation and higher accuracy (Fig. 10A). The R package `PlackettLuce` [@Turner2020] implements this tool and is a key element in the workflow.
 
-```{r workflow, fig.cap = "Workflow to analyse crowdsourced citizen science data. Several participants contribute with small tasks, all data is combined using rankings (\\textbf{A}). Covariates are linked to the rankings using georreferenced information and sowing dates (\\textbf{B}). Selection of the most relevant covariate(s) using forward selection aproach (\\textbf{C}). Automated reports can be generated to give feedback to participants in A (\\textbf{D}). A stable tree is used for further analysis and interpretation (\\textbf{E}).", echo=FALSE, out.width = '90%', fig.align="center"}
+```{r workflow, fig.cap = "Workflow to analyse crowdsourced citizen science data. Several participants contribute with small tasks, all data is combined using rankings (A). Covariates are linked to the rankings using georreferenced information and sowing dates (B). Selection of the most relevant covariate(s) using forward selection aproach (C). Automated reports can be generated to give feedback to participants in A (D). A stable tree is used for further analysis and interpretation (E).", echo=FALSE, out.width = '90%', fig.align="center"}
 knitr::include_graphics("display-items/workflow.png")
 ```
 
