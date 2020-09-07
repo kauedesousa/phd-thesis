@@ -79,9 +79,13 @@ J van Etten, **K de Sousa**, A Aguilar, M Barrios, A Coto, M Dell’Acqua, C Fad
 
 **Paper IV**
 
-**K de Sousa**, J van Etten, J Poland, C Fadda, JL Jannink, YG Kidane, BF Lakew, DF Mengistu, ME Pè, SØ Solberg, M Dell’Acqua. (2020) “Data-driven decentralised breeding increases genetic gain in a challenging crop production environment”. Manuscript submitted to Nature Communications.
+**K de Sousa**, J van Etten, J Poland, C Fadda, JL Jannink, YG Kidane, BF Lakew, DF Mengistu, ME Pè, SØ Solberg, M Dell’Acqua. (2020) “Data-driven decentralised breeding increases genetic gain in a challenging crop production environment”. Manuscript submitted.
 
 **Paper V**
+
+**K de Sousa**, AH Sparks, W Ashmall, J van Etten, SØ Solberg (2020). “chirps: API Client for the CHIRPS Precipitation Data in R”. *The Journal of Open Source Software*, 5(51), 2419. https://doi.org/10.21105/joss.02419
+
+**Paper VI**
 
 **K de Sousa**, J van Etten, SØ Solberg (2020). “Climate variability indices for ecological and crop models in R: the `climatrends` package”. 
 
@@ -427,28 +431,33 @@ Overall, we show that the data-driven focus of 3D-breeding enables embracing the
 
 ## A workflow to analyse crowdsourced citizen science data
 
-During the implementation of the activities in this project we developed a series of tools and methods to accommodate the *tricot* data into a dynamic workflow in R [@RCoreTeam] that could update the models and provide new insights as the database grows in number of datapoints (Fig. 10). This were our first steps in moving the *tricot* data analysis into a machine learning framework [@James2013]. The workflow follows the steps: (*A*) Several participants contribute with small tasks, as explained in the *tricot* description, (*B*) Explanatory variables are added (*e.g.* using geographical coordinates and planting dates, or even DNA markers), (*C*) Model selection to find the variables that best explain the data (*D*) Automated reports can be generated and provide feedback to participants, (*E*) A stable Plackett-Luce tree is used for further analysis and inference. 
+During the implementation of the activities in this project we developed a series of tools and methods to accommodate the *tricot* data into a dynamic workflow in R [@RCoreTeam] that could update the models and provide new insights as the database grows in number of datapoints (Fig. 10). This were our first steps in moving the *tricot* data analysis into a machine learning framework [@James2013]. The workflow follows the steps: (*A*) Several participants contribute with small tasks, as explained in the *tricot* description, (*B*) Explanatory variables are added (*e.g.* using geographical coordinates and planting dates, or even DNA markers), (*C*) Model selection to find the variables that best explain the data (*D*) Automated reports can be generated and provide feedback to participants, (*E*) A stable recursive partitioning tree is used for further analysis and inference. 
 
-The *tricot* data is storaged in the cloud under the ClimMob platform (https://climmob.net/blog/). We developed `ClimMobTools` [@climmobtools] an API client that allows the user to fetch their *tricot* data into the R section preserving the original data.
+The ClimMob platform (https://climmob.net/blog/) storages the *tricot* data in the cloud. To start the workflow, we developed `ClimMobTools` [@climmobtools] an application programming interface (API) client that allows the user to fetch their *tricot* data into the R section preserving the original data. This package is designed to work with the ClimMob platform and has no clear application in other domains. 
 
-We focused on generalisation of the tools, which means that they can be used in other domains outside the the proposed workflow. First we moved the data analysis from Bradley-Terry model to Plackett-Luce, since, unlike the former, it considerer the entire permutation instead of pairwise comparisons, allowing for fast computation and higher accuracy (Fig. 10A). The R package `PlackettLuce` [@Turner2020] implements this tool and is a key element in the workflow.
+For the other tools, we focused on generalisation, which means that they can be used in other domains outside the the proposed workflow. First, we moved the data analysis from Bradley-Terry model to Plackett-Luce, since, unlike the former, it considerer the entire permutation instead of pairwise comparisons, allowing for fast computation and higher accuracy (Fig. 10A). The R package `PlackettLuce` [@Turner2020] implements this tool and is a key element in the workflow.
 
-```{r workflow, fig.cap = "Workflow to analyse crowdsourced citizen science data. Several participants contribute with small tasks, all data is combined using rankings (\\textbf{A}). Covariates (climatic or DNA markers) are linked to the rankings using georreferenced information and sowing dates (\\textbf{B}). Selection of the most relevant covariate(s) using forward selection aproach (\\textbf{C}). Automated reports can be generated to give feedback to participants in A (\\textbf{D}). A stable tree is used for further analysis and interpretation (\\textbf{E}).", echo=FALSE, out.width = '90%', fig.align="center"}
+```{r workflow, fig.cap = "Workflow to analyse crowdsourced citizen science data. Several participants contribute with small tasks, all data is combined using rankings (\\textbf{A}). Covariates are linked to the rankings using georreferenced information and sowing dates (\\textbf{B}). Selection of the most relevant covariate(s) using forward selection aproach (\\textbf{C}). Automated reports can be generated to give feedback to participants in A (\\textbf{D}). A stable tree is used for further analysis and interpretation (\\textbf{E}).", echo=FALSE, out.width = '90%', fig.align="center"}
 knitr::include_graphics("display-items/workflow.png")
 ```
 
-To link environmental covariates to the rankings (Fig. 10B) we developed the R packages `climatrends` [@climatrends] and `chirps` [@chirps]. The package `climatrends` supports analysis of trends in climate change, ecological and crop modelling by computing environmental variables with temperature and precipitation data. It started as a set of R scripts used in Paper I [@deSousa2018] and, as it grew in complexity and demand, it was implemented as a R package. The tool not only supports the proposed workflow but can be used in ecology and climatology, as described in its application paper. The package `chirps` offers an application programming interface (API) client for the CHIRPS data [@Funk2015] in R. With the package, users can fetch CHIRPS data into the R section and compute rainfall indices that can be linked to the workflow or used in other domains. 
+To link environmental covariates with the rankings (Fig. 10B) we developed the R packages `climatrends` [@climatrends] and `chirps` [@chirps]. The package `climatrends` supports analysis of trends in climate change, ecological and crop modelling by computing temperature and precipitation indices, the data required to compute such indices can be provided by the user or alternatively using the R package `nasapower` [@Sparks2018] and `chirps`, further details are given in the dynamic documentation in the package's website. The package `climatrends` started as a set of R scripts used in Paper I [@deSousa2018] and, as it grew in complexity and demand, it was implemented as a R package. The package not only supports the proposed workflow but can be used in ecology and climatology. The package `chirps` offers an API client for the CHIRPS data [@Funk2015] in R. With the package, users can fetch CHIRPS data into the R section and compute rainfall indices that can be linked to the workflow or used in other research domains. 
 
-For step C (Fig. 10C) we developed the R package `gosset` [@gosset] which provides the methods to analyse the *tricot* and other metadata, from collating data (transforming into rankings) to model selection and visualisation. The cross-validation, forward selection, pseudo-$R^2$, and Kendal $\tau$ computation used in Paper III and Paper IV are implemented in this package. 
+The R package `gosset` [@gosset] which provides the methods to analyse the *tricot* and other metadata, from collating data (transforming into rankings) to model selection and visualisation. It supports steps C, D and E of the workflow. The cross-validation and forward selection procedure, as well as the Akaike weights, pseudo-$R^2$, Kendal $\tau$, and worst regret computation used in Paper III and Paper IV are implemented in this package. Additionally, it also has visualisation tools that help the explanatory analysis of any ranking data.
 
+One of the steps to better address smallholder farmer adaptation is the evaluation and learning [@vanZonneveld2020]. In step D, supported by the package `gosset`, we provide the supporting methods to give feedback to participants in the *tricot* experiments, a procedure that is automated in the ClimMob platform [@climmobanalysis]. Overall, these tools are our attempt to provide to the research community a set of open source tools for data analysis, and also to enable the replication of the analysis reported in this study. 
 
 # Conclusions
+
+
 
 # Future research and perspective
 
 * Open questions on new agroforestry designs
 * Adoption rates of crop varieties and underutilised trees
+* Use big data to infer patterns in crop $\times$ tree interactions to deliver recommendations based on the portfolio theory [@Blandon1985]
 * Potential to use the citizen science data with crop models
+* Tricot to assess consumers' preference as a final step in breeding programs 
 
   
 \pagebreak
@@ -508,3 +517,13 @@ knitr::include_graphics("display-items/paper4.jpg")
 \normalsize Durum wheat in a participatory variety selection plot in Tigray, Ethiopia. Credit: M. Dell'Acqua
 
 \includepdf[pages={-}]{article-4/deSousa_etal_manuscript.pdf}
+
+\Huge \flushright \textbf{\colorbox{gray!60}{Paper V}}
+\
+```{r paper5, echo=FALSE, out.width = '100%', fig.align="center"}
+knitr::include_graphics("display-items/paper5.jpg")
+```
+
+\normalsize Tapajós River (an affluent to the Amazon River) in Santarém, Brazil. Credit: K. de Sousa
+
+\includepdf[pages={-}]{article-5/deSousa_etal_2020_chirps.pdf}
