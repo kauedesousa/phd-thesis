@@ -38,15 +38,22 @@ library("tidyverse")
 
 # Abstract
 
-Agriculture is a dynamic activity that constantly evolve since its origin. It sustains food and other goods that the global population depends on. Aiming to ensure global food security, the sector has evolved dramatically, especially over the last century with the introduction of high-yielding crops, improved technology, and pathogen resistant and nutrition enriched varieties, to name a few. Still, according to the FAO, the food security issue is constantly present. In 2019, around 26% of the world population experienced either a moderate or severe level of food insecurity. Climate change makes the challenge of food security even more accurate. To cope with climate change and global food insecurity, the whole food system needs to be transformed, including at farm level but also on how food is distributed and what we eat. It is argued that increased agrobiodiversity through farm diversification and varietal selection can help farmers to cope up with the negative effects of climate change while ensuring food security. However, such approaches have been difficult to scale up. One could argue that we often lack information to understand the contexts that drives farmers' adaptation decisions. In this project we developed methods and tools to support farmers and stakeholders in adapting to a changing climate. We compiled evidence and insights from three continents to improve the understanding of the food systems at the farm level, and specifically for smallholders.
+Agriculture is a dynamic activity that constantly evolve since its origin. It sustains food and other goods that the global population depends on. Aiming to ensure global food security, the sector has evolved dramatically, especially over the last century with the introduction of high-yielding crops, improved technology, and pathogen resistant and nutrition enriched varieties, to name a few. Still, according to the Food and Agriculture Organisation of the United Nations (FAO), the food security issue is still present. In 2019, around 26% of the world population experienced either a moderate or severe level of food insecurity. Climate change makes the challenge of food security even more accurate. To cope with climate change and global food insecurity, the whole food system needs to be transformed. It is argued that increased agrobiodiversity through farm diversification and varietal selection can help farmers to cope with the negative effects of climate change while ensuring food security. However, such approaches have been difficult to scale up. One could argue that we often lack information to understand the contexts that drives farmers' adaptation decisions and how to develop recommendations domains for adaptation. In this project I developed methods and tools to support farmers and stakeholders in adapting to a changing climate. I compiled evidence and insights from three continents to improve the understanding of the food systems at the farm level, and specifically for smallholders. I provide evidence for the different levels of biological organisation: species, focusing on trees as slow grower organisms for interspecific diversification; varieties, looking for locally adapted phenotypes; and genotypes (genes) focusing on G $\times$ E interactions to support crop breeding for intraspecific diversification. The results from one research site showed that farmers have a clear preference to a set of adaptation strategies (Paper 1), with reforestation (agroforestry) as the first choice disregarding socio-economic characteristics. Crop variety management is the least preferred choice of the top-5. I assessed how suitable to climate change are the habitats of the most common trees species used in agroforestry (Paper 2). The results showed that the most preferred trees are the most vulnerable, and requires a re-design of the current agroforestry systems using under-utilised species that are already present in the current systems in low densities. On the other hand, I employed a citizen science approach that could scale agricultural experimentation and help farmers in select the right crop variety for their farms (Paper 3). The results showed that the approach reduce geographic sampling bias and can be scaled across space and time to provide tailored recommendations on crop varieties. I also show that linking the farmer-generated data to scientist-generated data (*e.g.* DNA, atmospheric data) can support breeding programs targeting challenging crop environments using a data-driven decentralised approach (Paper 4). The approach is fully replicable, and part of its workflow is presented in this thesis (Paper 5 and Paper 6). Overall, the results of this study are a starting point to develop lines of research that support the development of recommendation domains to adapt agricultural systems to a changing climate.
 
 \pagebreak
 
 # Sammendrag
 
+Landbruk er en dynamisk aktivitet som stadig utvikler seg siden opprinnelsen. Den opprettholder mat og andre varer som verdens befolkning er avhengig av. Siktet for å sikre global matsikkerhet, har sektoren utviklet seg dramatisk, spesielt i løpet av det siste århundret med innføring av avlinger med høy avling, forbedret teknologi og patogenresistente og ernæringsberikede varianter, for å nevne noen. I følge FNs mat- og jordbruksorganisasjon (FAO) er matsikkerhetsspørsmålet fortsatt til stede. I 2019 opplevde rundt 26% av verdens befolkning enten et moderat eller alvorlig nivå av matusikkerhet. Klimaendringer gjør utfordringen med matsikkerhet enda mer nøyaktig. For å takle klimaendringer og global matusikkerhet, må hele matvaresystemet transformeres. Det hevdes at økt biologisk mangfold gjennom diversifisering av gård og sortvalg kan hjelpe bønder til å takle de negative effektene av klimaendringene, samtidig som det sikrer matsikkerhet. Imidlertid har slike tilnærminger vært vanskelig å oppskalere. Man kan hevde at vi ofte mangler informasjon for å forstå sammenhenger som driver bøndenes tilpasningsbeslutninger og hvordan man kan utvikle anbefalinger domener for tilpasning. I dette prosjektet utviklet jeg metoder og verktøy for å støtte bønder og interessenter i å tilpasse seg et skiftende klima. Jeg samlet bevis og innsikt fra tre kontinenter for å forbedre forståelsen av matvaresystemene på gårdsnivå, og spesielt for småbrukere. Jeg gir bevis for de ulike nivåene av biologisk organisasjon: arter, med fokus på trær som langsomt dyrkerorganismer for interspesifikk diversifisering; varianter, på jakt etter lokalt tilpassede fenotyper; og genotyper (gener) med fokus på G $\times$ E-interaksjoner for å støtte avlsavl for intraspesifikk diversifisering. Resultatene fra ett forskningssted viste at bønder har en klar preferanse for et sett med tilpasningsstrategier (Paper 1), med skogplanting (agroforestry) som førstevalg uten å ta hensyn til sosioøkonomiske egenskaper. Avlsforvaltning er det minst foretrukne valget av topp-5. Jeg vurderte hvor egnet klimaendringene er habitatene til de vanligste treslagene som brukes i skogbruket (Paper 2). Resultatene viste at de mest foretrukne trærne er de mest sårbare, og krever en ny utforming av dagens skogbrukssystemer ved bruk av underutnyttede arter som allerede er tilstede i dagens systemer i lave tettheter. På den annen side brukte jeg en innbyggervitenskapelig tilnærming som kunne skalere landbrukseksperimentering og hjelpe bønder med å velge riktig avlingsvariant for gårdene sine (Paper 3). Resultatene viste at tilnærmingen reduserer geografisk prøvetakingsforstyrrelse og kan skaleres over tid og tid for å gi skreddersydde anbefalinger om avlingsvarianter. Jeg viser også at å knytte bonde-genererte data til forsker-genererte data (* f.eks. * DNA, atmosfæriske data) kan støtte avlsprogrammer rettet mot utfordrende avlingsmiljøer ved hjelp av en datadrevet desentralisert tilnærming (Paper 4). Tilnærmingen er fullt replikerbar, og en del av arbeidsflyten presenteres i denne oppgaven (Paper 5 og Paper 6). Samlet sett er resultatene av denne studien et utgangspunkt for å utvikle forskningslinjer som støtter utviklingen av anbefalingsdomener for å tilpasse landbrukssystemer til et klima i endring.
+
 \pagebreak
 
 # Preface
+
+This thesis summarises an amazing chapter of my personal and professional life. Growing up in the middle of the Brazilian Amazon, I always had interest for plants, first to climb then but later to actually study and research how they function and grow. My grandmother was my sponsor, supporting my interest to cultivate and harvest beans in our garden (thanks gradma!). With my parents I learned that the way people interact with the environment is also an important aspect to look at. As I grew up, I met scientists that helped me to put these lessons into a more organised and scientific way. First at UFAM (my *Alma mater*) and INPA where I realised that, yes, I want to be a scientist. For this, thank you all. At CATIE, I learned how to integrate all the complexity of landscapes into coherent approaches, including people, trees and crops. Lessons that were taken to a higher level when I joined ICRAF, Bioversity International and INN University. During this time, I learned from a amazing group of scientist that gave me all the inputs that I used to develop this thesis. It summarises my interests in plants and their interplay with people, things that, as I said, I developed since I was a child. That is why this thesis looks for the different components of a landscape, first the people, then the trees and then the crops from where they take most of their food. I really enjoyed to write this thesis. Thanks to the unbelievable opportunities that I had and all the nice and brilliant people that I met during this path. I wish that the children growing in poor regions in the tropics have the same opportunities that I had. 
+
+Hamar, October 2, 2020    
+Kauê de Sousa
 
 \pagebreak
 
@@ -58,6 +65,10 @@ Agriculture is a dynamic activity that constantly evolve since its origin. It su
 
 \pagebreak
 
+\textcolor{white}{insertion}
+
+\pagebreak
+
 \listoffigures
 
 \pagebreak
@@ -66,27 +77,7 @@ Agriculture is a dynamic activity that constantly evolve since its origin. It su
 
 \pagebreak
 
-# Abbreviations
-
-API - Application Programming Interface
-
-AUC - Area Under the Curve
-
-BT - Bradley-Terry (model)
-
-CHIRPS - Climate Hazards Group InfraRed Precipitation with Station
-
-MAP - Mesoamerican Agroenvironmental Program
-
-PL - Plackett-Luce (model)
-
-RCP - Representative Concentration Pathways
-
-SDM - Species Distribution Model
-
-SNP - Single Nucleotide Polymorphism
-
-TRICOT - Triadic Comparison of Technologies
+\textcolor{white}{insertion}
 
 \pagebreak
 
@@ -118,17 +109,20 @@ J van Etten, **K de Sousa**, A Aguilar, M Barrios, A Coto, M Dell'Acqua, C Fadda
 
 \pagebreak
 
+\textcolor{white}{insertion}
+
+\pagebreak
 <!-- select Arabic page number and define on which number the it should start -->
 
 \pagenumbering{arabic}
 
-\setcounter{page}{11}
+\setcounter{page}{13}
 
 # Introduction
 
 Climate change has increased the risks and uncertainties associated with agriculture [@Challinor2016; @Campbell2016; @Steenwerth2014], which is one of the top sectors contributing to greenhouse gases accumulation [@Poore2018], and one of the most vulnerable to its effects [@Godfray2010; @Tilman2011]. Around the globe, changes in the frequency and intensity of extreme climatic events are expected [@Aguilar2005; @Imbach2018; @Lin2017; @Zohner2020], but its extent are hard to predict and will vary among regions. In the tropics, unpredictable precipitation and temperature oscillation associated with climate change has increased the concerns for farm adaptation, predominantly comprised by low-input smallholder systems that most likely will experience large yield gaps [@Challinor2016; @Peng2004; @Challinor2014; @Zhao2017]. On the other hand, an increase in temperatures, rainfall, and $CO_2$ levels may increase the productivity of agriculture in certain areas, most likely in some temperate zones [@DaMatta2019; @Tollenaar2017; @King2018]. This is however complicated, as increased pest pressure from weeds, insects and diseases, and highly seasonal climate variations are expected as well [@King2018; @Deutsch2018].
 
-Agriculture, however, is a dynamic activity that have gone through a series of transformations over centuries. In its origins, human populations selected, domesticated and replicated the best plant genotypes and developed intercropping systems on which were the first steps of organised societies [@Bellwood2004; @Maezumi2018; @Zeven1998; @Vavilov1992]. In the last century, in the attempt to provide food for a growing human population, agriculture evolved dramatically through the release of technological packages with high-yielding and high-tolerant crops that boosted agricultural production [@Eshed2019; @Hickey2019]. This revolution led to complex and diversified food systems that improved food access and economic growth throughout the world [@Hickey2019; @Pingali2012]. However, this also produced trade-offs such as land degradation [@Gibbs2010], the increase in the intake of high caloric and poorly nutritional foods [@Pingali2012], and reduction in agricultural diversity through a greater focus on few crop species [@Manners2018]. Also, the question on how to feed a growing human population still persists [@SOFI2019], despite the great contributions achieved in the agricultural sector [@Pingali2012]. Climate change magnifies the challenge. This calls for a new revolution and transformation of our food systems, including at farm level [@Nelson2020; @Sanchez2020; @Manners2018], but also on how food is distributed and what we eat [@Willett2019; @Hirvonen2020].
+Agriculture, however, is a dynamic activity that have gone through a series of transformations over centuries. In its origins, human populations selected, domesticated and replicated the best plant genotypes and developed intercropping systems on which were the first steps of organised societies [@Bellwood2004; @Maezumi2018; @Zeven1998; @Vavilov1992]. In the last century, in the attempt to provide food for a growing human population, agriculture evolved dramatically through the release of technological packages with high-yielding and high-tolerant crops that boosted agricultural production [@Eshed2019; @Hickey2019]. This revolution led to complex and diversified food systems that improved food access and economic growth throughout the world [@Hickey2019; @Pingali2012]. However, this also produced trade-offs such as land degradation [@Gibbs2010], the increase in the intake of high caloric and poorly nutritional foods [@Pingali2012], and reduction in agricultural diversity through a greater focus on few crop species [@Manners2018]. Also, the question on how to feed a growing human population still persists [@SOFI2019], despite the great contributions achieved in the agricultural sector [@Pingali2012]. Climate change magnifies the challenge. This calls for a new revolution and transformation of our food systems [@Loboguerrero2020], at the farm level [@Nelson2020; @Sanchez2020], at the crop science level [@Manners2018], and also on how food is distributed and what we eat [@Willett2019; @Hirvonen2020].
 
 It is argued that adoption of sustainable intensification and agroecological practices to meet the future challenges will help farmers to cope up with the effects of climate change [@Zimmerer2017; @Nelson2020; @Lipper2014; @Thornton2017; @Campbell2016; @Steenwerth2014; @Andrade2020]. This transformation would involve a number of integrative approaches to help farmers to reorient their agricultural practices to ensure a rise in productivity, farm income and food security while adapting and mitigating to climate change. These practices include a range of actions, such as diversification, agroforestry, varietal selection, crop breeding, and landscape planning. Diversification, with the use of crop variety management or agroforestry, is one of the most promoted approaches [@vanZonneveld2020]. However, this approach need to be explored to identify local solutions that embrace the complexity of the cropping system with its ecological interactions and abiotic factors.
 
@@ -136,7 +130,7 @@ For diversification with varietal selection, one proposed solution is to increas
 
 In terms of agroforestry, adaptation is addressed by introducing trees to the agricultural production system to ameliorate abiotic stress and facilitate the performance of understory crops [@Blaser2018; @Holmgren1997]. This approach is particularly challenging, as perennial crops take long before farmers fully benefit from their management decisions [@Ramirez2001; @deSousa2016; @Cerda2014]. Two issues also increase the uncertainty of agroforestry to address climate adaptation and risk management. First, climate change may also affect the habitat for agroforestry tree species [@Lyra2017]. Second, interactions between trees and crops could drive negative results in productivity [@Blaser2018; @Abdulai2017], limiting the interest of farmers in adapt to this approach. Understand the effects of climate change on the suitability of agroforestry species may be one approach to support farmers in selecting agroforestry designs at low risk.
 
-The increasingly intensity of extreme climatic events associated to climate change and the absence of knowledge to provide recommendation domains highlight the need of rapid, tailored and straightforward solutions to help farmers to adapt agricultural production. In this thesis I analysed diversification approaches to bring new insights to generate accurate climate-friendly recommendations for farmers across different climatic spaces. I focussed on smallholder farming, a practice that is conducted in more than 570 million farms worldwide [@Lowder2016], contribute to around 30-34% of global food supply [@Ricciardi2018], is central for the conservation of agrobiodiversity [@Altieri2017], but also highly vulnerable to climate change [@Lipper2014; @Harvey2014; @Vermeulen2012]. Here I bring evidence for different levels of biological organisation: species, focusing on trees as slow grower organisms; varieties, looking for locally adapted phenotypes; and genotypes (genes) focusing on G $\times$ E interactions to support crop breeding.
+The increasingly intensity of extreme climatic events associated to climate change and the absence of knowledge to provide recommendation domains highlight the need of rapid, tailored and straightforward solutions to help farmers to adapt agricultural production. In this thesis I analysed diversification approaches to bring new insights to generate accurate climate-friendly recommendations for farmers across different climatic spaces. I focussed on smallholder farming, a practice that is conducted in more than 570 million farms worldwide [@Lowder2016], contribute to around 30-34% of global food supply [@Ricciardi2018], is central for the conservation of agrobiodiversity [@Altieri2017], but also highly vulnerable to climate change [@Lipper2014; @Harvey2014; @Vermeulen2012]. Here I bring evidence for different levels of biological organisation: species, focusing on trees as slow grower organisms for interspecific diversification; varieties, looking for locally adapted phenotypes; and genotypes (genes) focusing on G $\times$ E interactions to support crop breeding for intraspecific diversification.
 
 # Objectives
 
@@ -211,7 +205,7 @@ To address the first question, we linked the farmers' responses as categorical v
 
 The second question was answered by linking the farmers prioritised adaptation management strategies with their socio-economic data. Household socio-economic data was obtained by the baseline survey performed with all farmers for the Mesoamerican Environmental Program. From the adaptation strategies derived from all responses, we compiled a list of 10 options: (*i*) Change in Agricultural Calendar, (*ii*) Change in Varieties, (*iii*) Production Diversification, (*iv*) Introduction of New Crops, (*v*) Less Fertilizers and Pesticides, (*vi*) Reforestation and Restoration, (*vii*) Sustainable Soil Management, (*viii*) Sustainable Water Management, (*ix*) Leave Farming System, and (*x*) More Fertilizers and Pesticides.
 
-The relative importance of the different strategies was measured following the Luce’s Choice Axiom, which states that the probability that one item beats another is independent from the presence or absence of any other items in the set [@Luce1959].
+The relative importance of the different strategies was measured following the Luce’s Choice Axiom [@Luce1959], which states that the probability that one item beats another is independent from the presence or absence of any other items in the set.
 
 Equation [1]
 
@@ -312,7 +306,7 @@ Fourteen climatic variables were extracted for the vegetative, reproductive and 
 knitr::include_graphics("display-items/tricot_design.png")
 ```
 
-We compared the goodness-of-fit of the model with climatic variables (climate model) against three other models. The first with no covariates (intercept-only model), the second with geolocation, season, planting dates, and soil categories, which represented the experimental design (design model). And the third model with a combination of climatic variables plus geolocation (climate + geolocation model). To compare the models, we calculated a weighted average of pseudo-$R^2$ (deviance reduction) values across testing seasons [@Agresti2002], using the square root of the sample size as weights [@Whitlock2005]. All this process was done using an alpha version of the R package `gosset` [@gosset]. Replication data and code used in this analysis are available through Dataverse [@vanettenreplic]
+We compared the goodness-of-fit of the model with climatic variables (climate model) against three other models. The first with no covariates (intercept-only model), the second with geolocation, season, planting dates, and soil categories, which represented the experimental design (design model). And the third model with a combination of climatic variables plus geolocation (climate + geolocation model). To compare the models, we calculated a weighted average of pseudo-$R^2$ (deviance reduction) values across testing seasons [@Agresti2002], using the square root of the sample size as weights [@Whitlock2005]. All this process was done using an alpha version of the R package `gosset` [@gosset]. Replication data are available through Dataverse [@vanettenreplic]
 
 ## Decentralised genotype selection
 
@@ -338,15 +332,14 @@ The statistical model that represented 3D-breeding was developed using the data 
 
 We assessed whether climate awareness could led to sustainable adaptation decisions in smallholder farms in Central America. The 255 interviewed farmers (out of 283) reported to perceived changes in climate patterns over the 10 years prior to the survey (2005--2014). The multiple correspondence analysis of farmers' perceptions versus anomalies from observed data shows partial correlations between farmers' perceptions and the time series data (Figure 4). Farmers who perceived uncertainties in the start/end of the rainy season correlate with observed decrease in heavy precipitation (Rx5day) and increase in the duration of consecutive dry days (MLDS). However, farmers who perceived less annual precipitation correlate with observed increase in heavy precipitation (as result of less distributed rain across the season but concentrated in a short period), while those who perceived more precipitation or heavy precipitation did not correlate with any of the observed precipitation indices.
 
-The partial correlations in observed and perceived climate may be explained by the difficulty to properly observe the changes as they occur, without the aid of measuring devices (*e.g.* weather station, garden moisture meter), or access to climate services [@Bouroncle2019]. Or the result of cognitive bias [@Holmgren2018bias]. However, even if farmers do not perfectly perceive these changes, they do observe reductions in yields, and at times total losses, which draws their attention to climate-related issues and increases their willingness to innovate and try new farm management practices. Previous studies reported this behaviour as a product of experiencing climatic risks or disasters [@Bergquist2019; @vanValkengoed2019].
-
-In the case of interviewed farmers in Central America, there was a list of 10 practices that were adapted upon the perception of changes in climate patterns. The *worth* parameters for the adaptation practices show significant differences between the ranked options (Table 3). Practices of *Reforestation and Restoration*, *Introduction of New Crops*, and *Sustainable Soil Management* were reported as the most preferred choices among interviewed farmers, showing higher *worth* than the reference *Production Diversification*, which was selected as reference because if the most recommended adaptation strategy for farmers [@Atlin2017; @vanZonneveld2020]. *Change in varieties*, had a lower *worth* than the reference. The other practices were ranked below the reference, with *Leave Farming System* and *Change Agricultural Calendar* on the bottom of preferred practices to adapt to perceived changes in climatic patterns.
-
 ```{r perception_vs_observed, fig.cap = "Correlation between farmers’ perception on changes in precipitation and observed anomalies in precipitation indices over 2005–2014 in the sampled locations across Central America. MLDS, maximum length of consecutive dry days (< 1 mm); Rx5day, maximum 5-day precipitation (mm); SDII, simple annual precipitation index (mm/day).", echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("display-items/perception_vs_observed.png")
 ```
 
-We found significant differences in preferences for adaptation practices based on formal education level, farm size and ecological region, with the BT model identifying four different sub-groups. Overall, reforestation was the preferred choice among farmers independent of socio-economic profiles. This practice had an interplay with agroforestry, where farmers intentionally planted trees or allowed then to grow through natural regeneration within their crop systems. Several studies have reported agroforestry among the bests climate change adaptation strategies [@Mbow2014a; @Mbow2014b; @Verchot2007; @Blaser2018; @Lipper2014], it includes both mitigation and adaptation by providing carbon sink, microclimate regulation and protection to extreme climate events [@Caudill2015; @Holmgren2010; @Torres2017]. Farmers, however, have a clear preference to few marketable species or that has a clear utility within the crop system [@Ordonez2014; @Cerdan2012; @deSousa2016]. Some studies have shown that climate change can also affect the suitability of tree species [@Lyra2017; @deSousa2017Atlas] and hinder the benefits of agroforestry as an adaptation strategy.
+The partial correlations in observed and perceived climate may be explained by the difficulty to properly observe the changes as they occur, without the aid of measuring devices (*e.g.* weather station, garden moisture meter), or access to climate services [@Bouroncle2019]. Or the result of cognitive bias [@Holmgren2018bias]. However, even if farmers do not perfectly perceive these changes, they do observe reductions in yields, and at times total losses, which draws their attention to climate-related issues and increases their willingness to innovate and try new farm management practices. Previous studies reported this behaviour as a product of experiencing climatic risks or disasters [@Bergquist2019; @vanValkengoed2019].
+
+In the case of interviewed farmers in Central America, there was a list of 10 practices that were adapted upon the perception of changes in climate patterns. The *worth* parameters for the adaptation practices show significant differences between the ranked options (Table 3). Practices of *Reforestation and Restoration*, *Introduction of New Crops*, and *Sustainable Soil Management* were reported as the most preferred choices among interviewed farmers, showing higher *worth* than the reference *Production Diversification*, which was selected as reference because if the most recommended adaptation strategy for farmers [@Atlin2017; @vanZonneveld2020]. *Change in varieties*, had a lower *worth* than the reference. The other practices were ranked below the reference, with *Leave Farming System* and *Change Agricultural Calendar* on the bottom of preferred practices to adapt to perceived changes in climatic patterns.
+
 
 ```{r worth_bt, echo=FALSE, message=FALSE, results="asis", warning = FALSE}
 tb <- as.data.frame(matrix(
@@ -380,6 +373,9 @@ kable(tb,
 #       caption = "Table 3. Bradley-Terry model estimates from farmers’ management practices employed to adapt crop systems to perceived changes in climate patterns in Central America.",
 #              row.names = FALSE)
 ```
+
+
+We found significant differences in preferences for adaptation practices based on formal education level, farm size and ecological region, with the BT model identifying four different sub-groups. Overall, reforestation was the preferred choice among farmers independent of socio-economic profiles. This practice had an interplay with agroforestry, where farmers intentionally planted trees or allowed then to grow through natural regeneration within their crop systems. Several studies have reported agroforestry among the bests climate change adaptation strategies [@Mbow2014a; @Mbow2014b; @Verchot2007; @Blaser2018; @Lipper2014], it includes both mitigation and adaptation by providing carbon sink, microclimate regulation and protection to extreme climate events [@Caudill2015; @Holmgren2010; @Torres2017]. Farmers, however, have a clear preference to few marketable species or that has a clear utility within the crop system [@Ordonez2014; @Cerdan2012; @deSousa2016]. Some studies have shown that climate change can also affect the suitability of tree species [@Lyra2017; @deSousa2017Atlas] and hinder the benefits of agroforestry as an adaptation strategy.
 
 Change in varieties was the least choice in the top-5 options reported by interviewed farmers in Central America. The low uptake of this approach reflects the weakness of formal and informal seed systems in supporting smallholders to select the right variety [@McGuire2016], mainly the informal seed systems, as it is expected to provide higher contribution for local adaptation [@Bellon2001]. Costs and the high risk associated with crop variety managements by smallholder farmers are also among the reasons for the low uptake. Several studies in Africa and Asia investigated the reason for uptake (or non-uptake) of agricultural innovations among smallholder farmers [@Singh2017; @Elum2017; @Meijer2015; @Senyolo2018], the lack of knowledge [@Meijer2015] and high costs [@Senyolo2018], among others, were also pointed out as main reasons for non-uptake of innovations, such as crop variety management. Smallholder farming also have an intrinsic characteristic of being performed in diverse low-input systems [@Lowder2016], which makes the challenge of recommending (or producing new) crop varieties more problematic and riskier.
 
@@ -543,7 +539,9 @@ By scaling agricultural experimentation powered with citizen science we develope
 
 There is a series of open questions to explore on how to identify new agroforestry designs that both provide benefits to farmers and are resilient to future climates. The increasingly number of datasets being made available by research organisations in open source databases (*e.g.* Dataverse, Zenodo, CGIAR Gardian) may support the meta-analysis of large datasets to infer patterns on crop $\times$ tree interactions to deliver recommendations based on the portfolio theory [@Blandon1985]. New studies on phylogenetics [@Sauvadet2020] and farmers' local knowledge [@Cerdan2012] also offers an excellent opportunity to provide data-driven insights for future agroforestry designs.
 
-Future research on crop variety management would explore the other dimensions of the *tricot* data. Understanding farmers' planting decisions (based on the recorded planting dates) could provide information on which environmental factors that need to be considered to adjust the crop growing calendar for climate adaptation. We also see a potential to employ citizen science data with crop models targeting challenging crop production environments by, for example, using the new indices for physiological stress [@Challinor2016; @Trnka2014] implemented in the package `climatrends`, such as heat stress events, lethal temperatures and crop duration index. Incorporating socio-economic data derived from the Rural Household Multi-Indicator Survey (RHoMIS) data [@Hammond2017] could unlock a new factor (S) to the interactions that drive crop variety performance and management decisions, in that way tracking $G \times E \times M \times S$ interactions as they occur in the system. Future research would look for adoption rates of new crop varieties and look for the intertwining of farmers' overall appreciation with other traits (*e.g.* resistance to pests, market value) that are also registered in the *tricot* trials but never explored until now. In the final line of the breeding program, it is also important to consider the consumers' preference and market acceptance on new products, the *tricot* approach could support such assessments and orient breeders and markets on the development and fine tuning of agricultural products for resilient and sustainable food systems.
+Future research on crop variety management would explore the other dimensions of the *tricot* data. With Paper 4 we also demonstrated the potential in joining the citizen science data with scientist-generated data (DNA data, grain yield, etc.) and atmospheric data to capture some of the layers of information provided by the kind of data set. The data-driven approach could be used to further developed to further integrate different topics in the agroecological approach, maybe joining information from plant $\times$ insect interactions and the interplay of using a diversified portfolio of species/varieties and other organisms that are part of the production system. The *tricot* approach can also be further developed for to be adjusted to the needs of the civil society, maybe integrated into urban agriculture, digital agricultural markets and extension programs. 
+
+Additionally, understanding farmers' planting decisions (based on the recorded planting dates) could provide information on which environmental factors that need to be considered to adjust the crop growing calendar for climate adaptation. We also see a potential to employ citizen science data with crop models targeting challenging crop production environments by, for example, using the new indices for physiological stress [@Challinor2016; @Trnka2014] implemented in the package `climatrends`, such as heat stress events, lethal temperatures and crop duration index. Incorporating socio-economic data derived from the Rural Household Multi-Indicator Survey (RHoMIS) data [@Hammond2017] could unlock a new factor (S) to the interactions that drive crop variety performance and management decisions, in that way tracking $G \times E \times M \times S$ interactions as they occur in the system. Future research would look for adoption rates of new crop varieties and look for the intertwining of farmers' overall appreciation with other traits (*e.g.* resistance to pests, market value) that are also registered in the *tricot* trials but never explored until now. In the final line of the breeding program, it is also important to consider the consumers' preference and market acceptance on new products, the *tricot* approach could support such assessments and orient breeders and markets on the development and fine tuning of agricultural products for resilient and sustainable food systems.
 
 \pagebreak
 
@@ -555,11 +553,11 @@ The research in the papers attached alongside this thesis has been possible than
 
 # Acknowledgements
 
-This thesis would be impossible without the contribution of a number of people, to be exact, 34 co-authors who contributed in some extent to the development of this work. I really appreciate the help. One special thanks to Jenny Ordoñez, Maarten van Zonneveld, Milena Holmgren and Leida Mercado who guided me in the first steps that I took towards this project. Your support, advice, encouragement, and brilliant insights are something that I will keep with me for the rest of my life. Thank you!
+This thesis would be likely impossible without the contribution of a number of people, to be exact, 34 co-authors who contributed in some extent to the development of this work. I really appreciate all the help. One special thanks to Jenny Ordoñez, Maarten van Zonneveld, Milena Holmgren and Leida Mercado who guided me in the first steps that I took towards this project. Your support, advice, encouragement, and brilliant insights are something that I will keep with me for the rest of my life. Thank you!
 
-Thanks to my supervisor, Svein Ø. Solberg, for his great support and always great advices that made possible for me to develop this work. Thanks to Jacob van Etten for his great ideas that inspired me during these years. Thanks to Elisabeth Røe, Ragnhild Østerhagen, Henriette Wathne Gelink, Kaja Johnsen, Morten Tofastrud, Karol Araya and Luis Allen for administrative support. Also thanks to Fred H. Johnsen for his great support in the early steps of this PhD project.
+Thanks to my supervisor, Svein Ø. Solberg, for his great support and always great advices that made possible for me to develop this work. Thanks to my co-supervisor Jacob van Etten for his brilliant ideas that inspired me during these years. Thanks to Elisabeth Røe, Ragnhild Østerhagen, Henriette Wathne Gelink, Kaja Johnsen, Morten Tofastrud, Karol Araya and Luis Allen for administrative support. Also thanks to Fred H. Johnsen for his great support in the early steps of my PhD project and arrival to Norway.
 
-Thanks to my wife Suelen, my son Kairê and my daughter Liana to be always present, supportive and inspiring. Thanks to my mother and father for the great effort to provide the best possible to raise me and my brothers. Thanks to my friends Jorge Sellare and Juan Pablo Iñamagua for the nice discussions and great moments that we had in the course of that project.
+Thanks to my wife Suelen, my son Kairê and my daughter Liana for being always present, supportive and inspiring. Thanks to my parents for the great effort to provide the best possible to raise me and my brothers. Thanks to my friends Jorge Sellare and Juan Pablo Iñamagua for the nice discussions and great moments that we had in the course of these years.
 
 Thank you!
 
@@ -572,6 +570,10 @@ Thank you!
 
 \pagebreak
 
+\textcolor{white}{insertion}
+
+\pagebreak
+
 \fontsize{72}{72} \flushright \textbf{\colorbox{gray!60}{1}}
 
 ```{r paper1, echo=FALSE, out.width = '100%', fig.align="center"}
@@ -580,7 +582,19 @@ knitr::include_graphics("display-items/paper1.jpg")
 
 \normalsize Overview of the agricultural landscape in Copán, Honduras. Credit: K. de Sousa
 
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
+
 \includepdf[pages={-}]{article-1/deSousa_etal_2018_rural_studies.pdf}
+
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
 
 \fontsize{72}{72} \flushright \textbf{\colorbox{gray!60}{2}}
 
@@ -590,7 +604,19 @@ knitr::include_graphics("display-items/paper2.jpg")
 
 \normalsize Coffee agroforestry system in El Cuá, Nicaragua. Credit: K. de Sousa
 
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
+
 \includepdf[pages={-}]{article-2/deSousa_etal_2019_scientific_reports.pdf}
+
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
 
 \fontsize{72}{72} \flushright \textbf{\colorbox{gray!60}{3}}
 
@@ -599,6 +625,12 @@ knitr::include_graphics("display-items/paper3.png")
 ```
 
 \normalsize Farmer evaluating a common beans plot under the *tricot* approach, Honduras. Credit: J. Steinke
+
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
 
 \includepdf[pages={-}]{article-3/vanEtten_deSousa_etal_2019_pnas.pdf}
 
@@ -610,7 +642,14 @@ knitr::include_graphics("display-items/paper4.jpg")
 
 \normalsize Durum wheat in a participatory variety selection plot in Tigray, Ethiopia. Credit: M. Dell'Acqua
 
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
+
 \includepdf[pages={-}]{article-4/deSousa_etal_manuscript.pdf}
+
 
 \fontsize{72}{72} \flushright \textbf{\colorbox{gray!60}{5}}
 
@@ -620,7 +659,19 @@ knitr::include_graphics("display-items/paper5.png")
 
 \normalsize The R package `chirps` hex logo
 
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
+
 \includepdf[pages={-}]{article-5/deSousa_etal_2020_chirps.pdf}
+
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
 
 \fontsize{72}{72} \flushright \textbf{\colorbox{gray!60}{6}}
 
@@ -629,3 +680,11 @@ knitr::include_graphics("display-items/paper6.png")
 ```
 
 \normalsize The R package `climatrends` hex logo
+
+\pagebreak
+
+\textcolor{white}{insertion}
+
+\pagebreak
+
+\includepdf[pages={-}]{article-6/paper.pdf}
